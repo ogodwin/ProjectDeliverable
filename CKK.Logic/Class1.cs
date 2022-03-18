@@ -6,3 +6,4 @@ namespace CKK.Logic
     {
     }
 }
+
