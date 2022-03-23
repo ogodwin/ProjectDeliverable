@@ -32,11 +32,9 @@ namespace CKK.Logic.Models
             return product;
         }
 
-        public void SetProduct(int productid, string productname, float productprice)
+        public void SetProduct(Product _product)
         {
-            product.Id = productid;
-            product.Name = productname;
-            product.Price = productprice;
+            product = _product;
         }
     }
 }
