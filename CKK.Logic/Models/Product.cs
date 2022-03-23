@@ -10,7 +10,7 @@ namespace CKK.Logic.Models
     {
         public int Id;
         public string Name;
-        public float Price;
+        public decimal Price;
 
         public int GetId()
         {
@@ -32,12 +32,12 @@ namespace CKK.Logic.Models
             Name = productname;
         }
 
-        public float GetPrice()
+        public decimal GetPrice()
         {
             return Price;
         }
 
-        public void SetPrice(float productprice)
+        public void SetPrice(decimal productprice)
         {
             Price = productprice;
         }
