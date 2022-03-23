@@ -8,8 +8,14 @@ namespace CKK.Logic.Models
 {
     class StoreItem
     {   
-        public Product Product = new Product();
         public int Quantity;
+        public Product product;
+        public StoreItem(Product _product, int _quantity)
+        {
+            Quantity = _quantity;
+            product = _product;
+        }
+        
 
         public int GetQuantity()
         {
@@ -23,14 +29,14 @@ namespace CKK.Logic.Models
 
         public Product GetProduct()
         {
-            return Product;
+            return product;
         }
 
         public void SetProduct(int productid, string productname, float productprice)
         {
-            Product.Id = productid;
-            Product.Name = productname;
-            Product.Price = productprice;
+            product.Id = productid;
+            product.Name = productname;
+            product.Price = productprice;
         }
     }
 }
