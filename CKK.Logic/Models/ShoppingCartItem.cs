@@ -39,7 +39,7 @@ namespace CKK.Logic.Models
 
         public decimal GetTotal()
         {
-            return Product.Price;
+            return Quantity * Product.Price;
         }
     }
 }
