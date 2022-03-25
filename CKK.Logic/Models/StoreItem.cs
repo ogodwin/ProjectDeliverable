@@ -9,11 +9,11 @@ namespace CKK.Logic.Models
     public class StoreItem
     {   
         public int Quantity;
-        public Product product;
+        public Product Product;
         public StoreItem(Product _product, int _quantity)
         {
             Quantity = _quantity;
-            product = _product;
+            Product = _product;
         }
         
 
@@ -29,12 +29,12 @@ namespace CKK.Logic.Models
 
         public Product GetProduct()
         {
-            return product;
+            return Product;
         }
 
         public void SetProduct(Product _product)
         {
-            product = _product;
+            Product = _product;
         }
     }
 }
