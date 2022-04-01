@@ -13,7 +13,7 @@ namespace CKK.Logic.Models
         public ShoppingCartItem Product2;
         public ShoppingCartItem Product3;
 
-        public ShoppingCart(Customer _customer, ShoppingCartItem _Product1, ShoppingCartItem _Product2, ShoppingCartItem _Product3)
+        public ShoppingCart(Customer _customer)
         {
             Customer = _customer;
             Product1 = _Product1;
