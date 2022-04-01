@@ -5,7 +5,7 @@ namespace CKK.Logic.Models
 {
     public class CKKTest
     {
-        public ShoppingCart testCart = new ShoppingCart(null, null, null, null);
+        public ShoppingCart testCart = new ShoppingCart(null);
         //Requirement: The inputted object must appear in position 1
         [Fact]
         public void AddingProduct()
