@@ -9,9 +9,9 @@ namespace CKK.Logic.Models
     public class ShoppingCart
     {
         public Customer Customer = new Customer();
-        public ShoppingCartItem Product1;
-        public ShoppingCartItem Product2;
-        public ShoppingCartItem Product3;
+        public ShoppingCartItem Product1 = null;
+        public ShoppingCartItem Product2 = null;
+        public ShoppingCartItem Product3 = null;
 
         public ShoppingCart(Customer _customer)
         {
@@ -52,6 +52,10 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod)
         {
+            if (prod == null)
+            {
+                return null;
+            }
             if (Product1 == null)
             {
                 Product1 = new ShoppingCartItem(prod, 1);
