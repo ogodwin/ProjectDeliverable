@@ -25,6 +25,8 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
+            if (prod is Product){
+                
             if (Product1 == null)
             {
                 Product1 = new ShoppingCartItem(prod, quantity);
@@ -47,7 +49,8 @@ namespace CKK.Logic.Models
             {
                 Console.WriteLine("Shopping cart is full!");
                 return null;
-            }
+            }}
+            else {return null;}
         }
 
         public ShoppingCartItem AddProduct(Product prod)
