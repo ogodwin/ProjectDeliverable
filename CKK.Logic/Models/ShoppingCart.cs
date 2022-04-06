@@ -85,7 +85,7 @@ namespace CKK.Logic.Models
             
             else if (Product1.Product == prod) 
             {
-                Product1.Quantity += quantity;
+                Product1.Quantity++;
                 return Product1;
             }
 
@@ -98,7 +98,7 @@ namespace CKK.Logic.Models
 
             else if (Product2.Product == prod) 
             {
-                Product2.Quantity += quantity;
+                Product2.Quantity++;
                 return Product2;
             }
                 
@@ -110,7 +110,7 @@ namespace CKK.Logic.Models
                 
             else if (Product3.Product == prod) 
             {
-                Product3.Quantity += quantity;
+                Product3.Quantity++;
                 return Product3;
             }
 
