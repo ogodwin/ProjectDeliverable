@@ -25,9 +25,10 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            Console.WriteLine(prod.Id);
-            Console.WriteLine(prod.Name);
-            Console.WriteLine(prod.Price);
+            if (quantity == 0)
+            {
+                return null;
+            }
             if (prod != null){
                 
 
@@ -77,9 +78,6 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod)
         {
-            Console.WriteLine(prod.Id);
-            Console.WriteLine(prod.Name);
-            Console.WriteLine(prod.Price);
             if (prod != null)
             {
                
