@@ -25,6 +25,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
+            Console.WriteLine(prod);
             if (prod != null){
                 
 
@@ -74,6 +75,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod)
         {
+            Console.WriteLine(prod);
             if (prod != null)
             {
                
