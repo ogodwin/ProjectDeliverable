@@ -32,16 +32,34 @@ namespace CKK.Logic.Models
                 Product1 = new ShoppingCartItem(prod, quantity);
                 return Product1;
             }
+                
+            else if (Product1.Product == prod) 
+            {
+                Product1.Quantity += quantity;
+                return Product1;
+            }
 
             else if (Product2 == null)
             {
                 Product2 = new ShoppingCartItem(prod, quantity);
                 return Product2;
             }
+                
+            else if (Product2.Product == prod) 
+            {
+                Product2.Quantity += quantity;
+                return Product2;
+            }
 
             else if (Product3 == null)
             {
                 Product3 = new ShoppingCartItem(prod, quantity);
+                return Product3;
+            }
+                
+            else if (Product3.Product == prod) 
+            {
+                Product3.Quantity += quantity;
                 return Product3;
             }
 
@@ -64,6 +82,13 @@ namespace CKK.Logic.Models
                 Product1 = new ShoppingCartItem(prod, 1);
                 return Product1;
             }
+            
+            else if (Product1.Product == prod) 
+            {
+                Product1.Quantity += quantity;
+                return Product1;
+            }
+
 
             else if (Product2 == null)
             {
@@ -71,9 +96,21 @@ namespace CKK.Logic.Models
                 return Product2;
             }
 
+            else if (Product2.Product == prod) 
+            {
+                Product2.Quantity += quantity;
+                return Product2;
+            }
+                
             else if (Product3 == null)
             {
                 Product3 = new ShoppingCartItem(prod, 1);
+                return Product3;
+            }
+                
+            else if (Product3.Product == prod) 
+            {
+                Product3.Quantity += quantity;
                 return Product3;
             }
 
