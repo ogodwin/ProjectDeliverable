@@ -25,8 +25,9 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            if (prod is Product){
+            if (prod != null){
                 
+
             if (Product1 == null)
             {
                 Product1 = new ShoppingCartItem(prod, quantity);
@@ -73,7 +74,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod)
         {
-            if (prod is Product)
+            if (prod != null)
             {
                
             
