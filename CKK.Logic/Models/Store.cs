@@ -51,7 +51,7 @@ namespace CKK.Logic.Models
                 }
             }
             Products.Add(new StoreItem(prod, quant));
-            return new StoreItem(prod, quant);
+            return Products[Products.Count];
         }
         public StoreItem AddStoreItem(Product prod)
         {
@@ -64,7 +64,7 @@ namespace CKK.Logic.Models
                 }
             }
             Products.Add(new StoreItem(prod, 1));
-            return new StoreItem(prod, 1);
+            return Products[Products.Count];
         }
 
         public StoreItem RemoveStoreItem(int id, int quant)
@@ -86,11 +86,11 @@ namespace CKK.Logic.Models
 
         public StoreItem FindStoreItemById(int id)
         {
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index < Products.Count; index++) //Iterates through all items in Products list
             {
-                if (Products[index].Product.Id == id)
+                if (Products[index].Product.Id == id) //Checks to see if the Product ID matches the passed value
                 {
-                    return Products[index];
+                    return Products[index]; //Returns the Product of the same ID
                 }
             }
             return null;
