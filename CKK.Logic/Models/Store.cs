@@ -38,6 +38,10 @@ namespace CKK.Logic.Models
 
         public StoreItem AddStoreItem(Product prod, int quant)
         {
+            if (quant < 1)
+            {
+                return null;
+            }
             for (int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product.Id == prod.Id)
@@ -50,14 +54,21 @@ namespace CKK.Logic.Models
             return new StoreItem(prod, quant);
         }
 
-        public StoreItem RemoveStoreItem(int productNumber, int quant)
+        public StoreItem RemoveStoreItem(int id, int quant)
         {
-            Products[productNumber].Quantity -= quant;
-            if (Products[productNumber].Quantity <= 0)
+            for (int index = 0; index < Products.Count; index++)
             {
-                Products[productNumber].Quantity = 0;
+                if (Products[index].Product.Id == id)
+                {
+                    Products[index].Quantity -= quant;
+                    if (Products[index].Quantity < 0)
+                    {
+                        Products[index].Quantity = 0;
+                    }
+                    return Products[index];
+                }
             }
-            return Products[productNumber];
+            return null;
         }
 
         public StoreItem FindStoreItemById(int id)
