@@ -11,7 +11,7 @@ namespace CKK.Logic.Models
         //Instantiating "Store" attributes
         private int Id;
         private string Name;
-        private List<StoreItem> Products = new List<StoreItem>();
+        private List<StoreItem> Items = new List<StoreItem>();
 
         //Defining "Store" methods
         public int GetId()
@@ -42,43 +42,43 @@ namespace CKK.Logic.Models
             {
                 return null;
             }
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index < Items.Count; index++)
             {
-                if (Products[index].Product.Id == prod.Id)
+                if (Items[index].Product.Id == prod.Id)
                 {
-                    Products[index].Quantity += quant;
-                    return Products[index];
+                    Items[index].Quantity += quant;
+                    return Items[index];
                 }
             }
-            Products.Add(new StoreItem(prod, quant));
+            Items.Add(new StoreItem(prod, quant));
             return new StoreItem(prod, quant);
         }
         public StoreItem AddStoreItem(Product prod)
         {
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index < Items.Count; index++)
             {
-                if (Products[index].Product.Id == prod.Id)
+                if (Items[index].Product.Id == prod.Id)
                 {
-                    Products[index].Quantity += 1;
-                    return Products[index];
+                    Items[index].Quantity += 1;
+                    return Items[index];
                 }
             }
-            Products.Add(new StoreItem(prod, 1));
+            Items.Add(new StoreItem(prod, 1));
             return new StoreItem(prod, 1);
         }
 
         public StoreItem RemoveStoreItem(int id, int quant)
         {
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index < Items.Count; index++)
             {
-                if (Products[index].Product.Id == id)
+                if (Items[index].Product.Id == id)
                 {
-                    Products[index].Quantity -= quant;
-                    if (Products[index].Quantity < 0)
+                    Items[index].Quantity -= quant;
+                    if (Items[index].Quantity < 0)
                     {
-                        Products[index].Quantity = 0;
+                        Items[index].Quantity = 0;
                     }
-                    return Products[index];
+                    return Items[index];
                 }
             }
             return null;
@@ -87,11 +87,16 @@ namespace CKK.Logic.Models
         public StoreItem FindStoreItemById(int id)
         {
 
-            for (int index = 0; index < Products.Count; index++) //Iterates through all items in Products list
+            for (int index = 0; index < Items.Count; index++) //Iterates through all items in Products list
             {
-                if (Products[index].Product.Id == id) //Checks to see if the Product ID matches the passed value
+                if (Items[index].Product.Id == id) //Checks to see if the Product ID matches the passed value
                 {
-                    return Products[index]; //Returns the Product of the same ID
+                    Console.WriteLine("Found it");
+                    return Items[index]; //Returns the Product of the same ID
+                }
+                else
+                {
+                    Console.WriteLine("Not this item");
                 }
             }
             return null;
@@ -99,7 +104,7 @@ namespace CKK.Logic.Models
 
         public List<StoreItem> GetStoreItems()
         {
-            return Products;
+            return Items;
         }
 
     }
