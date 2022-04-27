@@ -11,9 +11,7 @@ namespace CKK.Logic.Models
         //Instantiating "Store" attributes
         private int Id;
         private string Name;
-        private Product Product1;
-        private Product Product2;
-        private Product Product3;
+        private List<StoreItem> Products = new List<StoreItem>();
 
         //Defining "Store" methods
         public int GetId()
@@ -21,9 +19,10 @@ namespace CKK.Logic.Models
             return Id;
         }
 
-        public void SetId(int StoreID)
+        public int SetId(int StoreID)
         {
             Id = StoreID;
+            return Id;
         }
 
         public string GetName()
@@ -31,140 +30,52 @@ namespace CKK.Logic.Models
             return Name;
         }
 
-        public void SetName(string StoreName)
+        public string SetName(string StoreName)
         {
             Name = StoreName;
+            return Name;
         }
 
-        public void AddStoreItem(Product prod)
+        public StoreItem AddStoreItem(Product prod, int quant)
         {
-            if (Product1 == null)
+            for (int index = 0; index < Products.Count; index++)
             {
-                Product1 = prod;
+                if (Products[index].Product.Id == prod.Id)
+                {
+                    Products[index].Quantity += quant;
+                    return Products[index];
+                }
             }
-            else if (Product2 == null)
-            {
-                Product2 = prod;
-            }
-            else if (Product3 == null)
-            {
-                Product3 = prod;
-            }
-            else
-            {
-                Console.WriteLine("ERROR: No open product slots");
-            }
+            Products.Add(new StoreItem(prod, quant));
+            return new StoreItem(prod, quant);
         }
 
-        public void RemoveStoreItem(int productNumber)
+        public StoreItem RemoveStoreItem(int productNumber, int quant)
         {
-            if (productNumber == 1)
+            Products[productNumber].Quantity -= quant;
+            if (Products[productNumber].Quantity <= 0)
             {
-                if (Product1 == null)
-                {
-                    Console.WriteLine("No Store Item found in position 1");
-                }
-                else
-                {
-                    Console.WriteLine($"{Product1.Name} deleted from position 1");
-                    Product1 = null;
-                }
+                Products[productNumber].Quantity = 0;
             }
-            else if (productNumber == 2)
-            {
-                if (Product2 == null)
-                {
-                    Console.WriteLine("No Store Item found in position 2");
-                }
-                else
-                {
-                    Console.WriteLine($"{Product2.Name} deleted from position 2");
-                    Product2 = null;
-                }
-            }
-            else if (productNumber == 3)
-            {
-                if (Product3 == null)
-                {
-                    Console.WriteLine("No Store Item found in position 3");
-                }
-                else
-                {
-                    Console.WriteLine($"{Product3.Name} deleted from position 3");
-                    Product3 = null;
-                }
-            }
-
-            else
-            {
-                Console.WriteLine("Item position does not exist");
-            }
+            return Products[productNumber];
         }
 
-        public Product GetStoreItem(int productNumber)
+        public StoreItem FindStoreItemById(int id)
         {
-            if (productNumber == 1)
+            for (int index = 0; index < Products.Count; index++)
             {
-                if(Product1 == null)
+                if (Products[index].Product.Id == id)
                 {
-                    Console.WriteLine("No Store Item found in position 1");
-                    return null;
-                }
-                else
-                {
-                    return Product1;
+                    return Products[index];
                 }
             }
-            else if (productNumber == 2)
-            {
-                if (Product2 == null)
-                {
-                    Console.WriteLine("No Store Item found in position 2");
-                    return null;
-                }
-                else
-                {
-                    return Product2;
-                }
-            }
-            else if (productNumber == 3)
-            {
-                if (Product3 == null)
-                {
-                    Console.WriteLine("No Store Item found in position 3");
-                    return null;
-                }
-                else
-                {
-                    return Product3;
-                }
-            }
-            else
-            {
-                Console.WriteLine("Item position does not exist");
-                return null;
-            }
+            return null;
         }
 
-        public Product FindStoreItemById(int id)
+        public List<StoreItem> GetStoreItems(int productNumber)
         {
-            if (id == Product1.Id)
-            {
-                return Product1;
-            }
-            else if (id == Product2.Id)
-            {
-                return Product2;
-            }
-            else if (id == Product3.Id)
-            {
-                return Product3;
-            }
-            else
-            {
-                Console.WriteLine("No store object found");
-                return null;
-            }
+            return Products;
         }
+
     }
 }
