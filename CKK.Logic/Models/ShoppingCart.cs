@@ -102,9 +102,9 @@ namespace CKK.Logic.Models
             return total;
         }
 
-        public ShoppingCartItem GetProduct(int num)
+        public List<ShoppingCartItem> GetProducts()
         {
-            return Products[num];
+            return Products;
         }
     }
 }

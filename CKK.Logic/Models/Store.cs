@@ -72,7 +72,7 @@ namespace CKK.Logic.Models
             return null;
         }
 
-        public List<StoreItem> GetStoreItems(int productNumber)
+        public List<StoreItem> GetStoreItems()
         {
             return Products;
         }
