@@ -53,6 +53,19 @@ namespace CKK.Logic.Models
             Products.Add(new StoreItem(prod, quant));
             return new StoreItem(prod, quant);
         }
+        public StoreItem AddStoreItem(Product prod)
+        {
+            for (int index = 0; index < Products.Count; index++)
+            {
+                if (Products[index].Product.Id == prod.Id)
+                {
+                    Products[index].Quantity += 1;
+                    return Products[index];
+                }
+            }
+            Products.Add(new StoreItem(prod, 1));
+            return new StoreItem(prod, 1);
+        }
 
         public StoreItem RemoveStoreItem(int id, int quant)
         {
