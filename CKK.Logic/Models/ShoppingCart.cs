@@ -65,6 +65,7 @@ namespace CKK.Logic.Models
                     if(Products[index].Quantity <= 0)
                     {
                         returnItem = Products[index];
+                        returnItem.SetQuantity(0);
                         Products.RemoveAt(index);
                         return returnItem;
                     }
