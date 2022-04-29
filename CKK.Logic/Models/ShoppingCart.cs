@@ -23,6 +23,10 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
+            if (quantity < 1)
+            {
+                return null;
+            }
             for(int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product == prod)

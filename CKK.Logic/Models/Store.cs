@@ -41,35 +41,37 @@ namespace CKK.Logic.Models
             return Name;
         }
 
-        public StoreItem AddStoreItem(Product prod, int quant)
+        public StoreItem AddStoreItem(Product prod, int quantity)
         {
-            if (quant < 1)
+            if (quantity < 1)
             {
                 return null;
             }
             for (int index = 0; index < Items.Count; index++)
             {
-                if (Items[index].Product.Id == prod.Id)
+                if (Items[index].Product == prod)
                 {
-                    Items[index].Quantity += quant;
+                    Items[index].SetQuantity(Items[index].Quantity + quantity);
                     return Items[index];
                 }
             }
-            Items.Add(new StoreItem(prod, quant));
-            return new StoreItem(prod, quant);
+            StoreItem returnItem = new StoreItem(prod, quantity);
+            Items.Add(returnItem);
+            return returnItem;
         }
         public StoreItem AddStoreItem(Product prod)
         {
             for (int index = 0; index < Items.Count; index++)
             {
-                if (Items[index].Product.Id == prod.Id)
+                if (Items[index].Product == prod)
                 {
-                    Items[index].Quantity += 1;
+                    Items[index].SetQuantity(Items[index].Quantity + 1);
                     return Items[index];
                 }
             }
-            Items.Add(new StoreItem(prod, 1));
-            return new StoreItem(prod, 1);
+            StoreItem returnItem = new StoreItem(prod, 1);
+            Items.Add(returnItem);
+            return returnItem;
         }
 
         public StoreItem RemoveStoreItem(int id, int quant)
@@ -92,18 +94,16 @@ namespace CKK.Logic.Models
         public StoreItem FindStoreItemById(int id)
         {
 
-            for (int index = 0; index < Items.Count; index++) //Iterates through all items in Products list
+            for (int index = 0; index < Items.Count; index++)
             {
-                if (Items[index].Product.Id == id) //Checks to see if the Product ID matches the passed value
+
+                if (Items[index].Product.Id == id)
                 {
-                    Console.WriteLine("Found it");
-                    return Items[index]; //Returns the Product of the same ID
+                    return Items[index];
                 }
-                else
-                {
-                    Console.WriteLine("Not this item");
-                }
+
             }
+
             return null;
         }
 
