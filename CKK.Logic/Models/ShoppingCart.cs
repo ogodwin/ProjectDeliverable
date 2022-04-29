@@ -23,7 +23,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            for(int index = 0; index <= Products.Count; index++)
+            for(int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product == prod)
                 {
@@ -38,7 +38,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod)
         {
-            for (int index = 0; index <= Products.Count; index++)
+            for (int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product == prod)
                 {
@@ -53,7 +53,7 @@ namespace CKK.Logic.Models
         public ShoppingCartItem RemoveProduct(int id, int quantity)
         {
             ShoppingCartItem returnItem = new ShoppingCartItem(null, 0);
-            for (int index = 0; index <= Products.Count; index++)
+            for (int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product.Id == id)
                 {
@@ -76,7 +76,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProductById(int id)
         {
-            for (int index = 0; index <= Products.Count; index++)
+            for (int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product.Id == id)
                 {
@@ -89,7 +89,7 @@ namespace CKK.Logic.Models
         public decimal GetTotal()
         {
             decimal total = 0; 
-            for (int index = 0; index <= Products.Count; index++)
+            for (int index = 0; index < Products.Count; index++)
             {
                 total += Products[index].Product.Price * Products[index].Quantity;
             }

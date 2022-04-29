@@ -47,7 +47,7 @@ namespace CKK.Logic.Models
             {
                 return null;
             }
-            for (int index = 0; index <= Items.Count; index++)
+            for (int index = 0; index < Items.Count; index++)
             {
                 if (Items[index].Product.Id == prod.Id)
                 {
@@ -60,7 +60,7 @@ namespace CKK.Logic.Models
         }
         public StoreItem AddStoreItem(Product prod)
         {
-            for (int index = 0; index <= Items.Count; index++)
+            for (int index = 0; index < Items.Count; index++)
             {
                 if (Items[index].Product.Id == prod.Id)
                 {
@@ -74,7 +74,7 @@ namespace CKK.Logic.Models
 
         public StoreItem RemoveStoreItem(int id, int quant)
         {
-            for (int index = 0; index <= Items.Count; index++)
+            for (int index = 0; index < Items.Count; index++)
             {
                 if (Items[index].Product.Id == id)
                 {
@@ -92,7 +92,7 @@ namespace CKK.Logic.Models
         public StoreItem FindStoreItemById(int id)
         {
 
-            for (int index = 0; index <= Items.Count; index++) //Iterates through all items in Products list
+            for (int index = 0; index < Items.Count; index++) //Iterates through all items in Products list
             {
                 if (Items[index].Product.Id == id) //Checks to see if the Product ID matches the passed value
                 {
