@@ -23,43 +23,37 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem AddProduct(Product prod, int quantity)
         {
-            for(int index = 0; index < Products.Count; index++)
+            for(int index = 0; index <= Products.Count; index++)
             {
                 if (Products[index].Product == prod)
                 {
                     Products[index].SetQuantity(Products[index].Quantity + quantity);
                     return Products[index];
                 }
-                else
-                {
-                    Products.Add(new ShoppingCartItem(prod, quantity));
-                    return new ShoppingCartItem(prod, quantity);
-                }
             }
-            return null;
+            ShoppingCartItem returnItem = new ShoppingCartItem(prod, quantity);
+            Products.Add(returnItem);
+            return returnItem;
         }
 
         public ShoppingCartItem AddProduct(Product prod)
         {
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index <= Products.Count; index++)
             {
                 if (Products[index].Product == prod)
                 {
                     Products[index].SetQuantity(Products[index].Quantity + 1);
                     return Products[index];
                 }
-                else
-                {
-                    Products.Add(new ShoppingCartItem(prod, 1));
-                    return new ShoppingCartItem(prod, 1);
-                }
             }
-            return null;
+            ShoppingCartItem returnItem = new ShoppingCartItem(prod, 1);
+            Products.Add(returnItem);
+            return returnItem;
         }
         public ShoppingCartItem RemoveProduct(int id, int quantity)
         {
             ShoppingCartItem returnItem = new ShoppingCartItem(null, 0);
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index <= Products.Count; index++)
             {
                 if (Products[index].Product.Id == id)
                 {
@@ -82,7 +76,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProductById(int id)
         {
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index <= Products.Count; index++)
             {
                 if (Products[index].Product.Id == id)
                 {
@@ -95,7 +89,7 @@ namespace CKK.Logic.Models
         public decimal GetTotal()
         {
             decimal total = 0; 
-            for (int index = 0; index < Products.Count; index++)
+            for (int index = 0; index <= Products.Count; index++)
             {
                 total += Products[index].Product.Price * Products[index].Quantity;
             }
