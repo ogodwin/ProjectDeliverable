@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Interfaces
 {
-    public class Entity
+    public abstract class Entity
     {
         private int _Id;
         private string _Name;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Interfaces
 {
-    public class InventoryItem
+    public abstract class InventoryItem
     {
         private CKK.Logic.Models.Product _Product;
         private int _Quantity;
