@@ -8,8 +8,8 @@ namespace CKK.Logic.Interfaces
 {
     public class Entity
     {
-        protected int _Id;
-        protected string _Name;
+        private int _Id;
+        private string _Name;
 
         public int Id
         {

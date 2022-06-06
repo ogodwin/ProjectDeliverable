@@ -8,8 +8,8 @@ namespace CKK.Logic.Interfaces
 {
     public class InventoryItem
     {
-        protected CKK.Logic.Models.Product _Product;
-        protected int _Quantity;
+        private CKK.Logic.Models.Product _Product;
+        private int _Quantity;
 
         public CKK.Logic.Models.Product Product
         {
