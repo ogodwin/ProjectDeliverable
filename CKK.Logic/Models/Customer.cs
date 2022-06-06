@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Models
 {
-    public class Customer
+    public class Customer : CKK.Logic.Interfaces.Entity
     {
-        public int Id;
-        public string Name;
         public string Address;
 
         public int GetId()

@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Models
 {
-    public class Product
+    public class Product : CKK.Logic.Interfaces.Entity
     {
-        public int Id;
-        public string Name;
         public decimal Price;
 
         public int GetId()

@@ -6,11 +6,9 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Models
 {
-    public class Store
+    public class Store : CKK.Logic.Interfaces.Entity
     {
         //Instantiating "Store" attributes
-        private int Id;
-        private string Name;
         private List<StoreItem> Items = new List<StoreItem>();
 
         public Store()
@@ -49,9 +47,9 @@ namespace CKK.Logic.Models
             }
             for (int index = 0; index < Items.Count; index++)
             {
-                if (Items[index].Product == prod)
+                if (Items[index].GetProduct() == prod)
                 {
-                    Items[index].SetQuantity(Items[index].Quantity + quantity);
+                    Items[index].SetQuantity(Items[index].GetQuantity() + quantity);
                     return Items[index];
                 }
             }
@@ -63,9 +61,9 @@ namespace CKK.Logic.Models
         {
             for (int index = 0; index < Items.Count; index++)
             {
-                if (Items[index].Product == prod)
+                if (Items[index].GetProduct() == prod)
                 {
-                    Items[index].SetQuantity(Items[index].Quantity + 1);
+                    Items[index].SetQuantity(Items[index].GetQuantity() + 1);
                     return Items[index];
                 }
             }
@@ -78,12 +76,12 @@ namespace CKK.Logic.Models
         {
             for (int index = 0; index < Items.Count; index++)
             {
-                if (Items[index].Product.Id == id)
+                if (Items[index].GetProduct().GetId() == id)
                 {
-                    Items[index].Quantity -= quant;
-                    if (Items[index].Quantity < 0)
+                    Items[index].SetQuantity(Items[index].GetQuantity() - quant);
+                    if (Items[index].GetQuantity() < 0)
                     {
-                        Items[index].Quantity = 0;
+                        Items[index].SetQuantity(0);
                     }
                     return Items[index];
                 }
@@ -97,7 +95,7 @@ namespace CKK.Logic.Models
             for (int index = 0; index < Items.Count; index++)
             {
 
-                if (Items[index].Product.Id == id)
+                if (Items[index].GetProduct().GetId() == id)
                 {
                     return Items[index];
                 }

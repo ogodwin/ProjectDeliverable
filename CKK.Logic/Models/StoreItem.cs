@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Models
 {
-    public class StoreItem
+    public class StoreItem : CKK.Logic.Interfaces.InventoryItem
     {   
-        public int Quantity;
-        public Product Product;
         public StoreItem(Product _product, int _quantity)
         {
             Quantity = _quantity;
