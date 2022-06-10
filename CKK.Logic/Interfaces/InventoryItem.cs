@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CKK.Logic.Models;
 
 namespace CKK.Logic.Interfaces
 {
     public abstract class InventoryItem
     {
-        private CKK.Logic.Models.Product _Product;
+        private Product _Product;
         private int _Quantity;
 
-        public CKK.Logic.Models.Product Product
+        public Product Product
         {
             get { return _Product; }
             set { _Product = value; }
