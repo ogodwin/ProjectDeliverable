@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Models
 {
-    public class ShoppingCart
+    public class ShoppingCart : CKK.Logic.Interfaces.IShoppingCart
     {
         public Customer Customer = new Customer();
         public List<ShoppingCartItem> Products = new List<ShoppingCartItem>();

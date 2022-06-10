@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CKK.Logic.Models
 {
-    public class Store : CKK.Logic.Interfaces.Entity
+    public class Store : CKK.Logic.Interfaces.Entity, CKK.Logic.Interfaces.IStore
     {
         //Instantiating "Store" attributes
         private List<StoreItem> Items = new List<StoreItem>();
