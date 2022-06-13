@@ -63,24 +63,24 @@ namespace CKK.Logic.Models
                 throw new ArgumentOutOfRangeException();
             }
             ShoppingCartItem returnItem = new(null, 0);
-                for (int index = 0; index < Products.Count; index++)
-                {
-                    if (Products[index].Product.Id == id)
-                    {
-                        Products[index].Quantity -= quantity;
-                        if (Products[index].Quantity <= 0)
-                        {
-                            returnItem = Products[index];
-                            Products.RemoveAt(index);
-                            return returnItem;
-                        }
-                        else
-                        {
-                            return Products[index];
-                        }
-                    }
-                }
+            if ((Products.FindIndex(f => f.Product.Id == id) == -1)){
                 throw new ProductDoesNotExistException();
+            }
+            else
+            {
+                int index = Products.FindIndex(f => f.Product.Id == id);
+                Products[index].Quantity -= quantity;
+                if (Products[index].Quantity <= 0)
+                {
+                    returnItem = Products[index];
+                    Products.RemoveAt(index);
+                    return returnItem;
+                }
+                else
+                {
+                    return Products[index];
+                }
+            }
         }
 
         public ShoppingCartItem GetProductById(int id)
@@ -89,14 +89,15 @@ namespace CKK.Logic.Models
             {
                 throw new InvalidIdException();
             }
-            for (int index = 0; index < Products.Count; index++)
+            if ((Products.FindIndex(f => f.Product.Id == id) == -1))
             {
-                if (Products[index].Product.Id == id)
-                {
-                    return Products[index];
-                }
+                throw new ProductDoesNotExistException();
             }
-            return new ShoppingCartItem(null, 0);
+            else
+            {
+                int index = Products.FindIndex(f => f.Product.Id == id);
+                return Products[index];
+            }
         }
 
         public decimal GetTotal()
