@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CKK.Logic.Interfaces;
+using CKK.Logic.Exceptions;
 
 namespace CKK.Logic.Models
 {
-    public class ShoppingCart : CKK.Logic.Interfaces.IShoppingCart
+    public class ShoppingCart : IShoppingCart
     {
-        public Customer Customer = new Customer();
-        public List<ShoppingCartItem> Products = new List<ShoppingCartItem>();
+        public Customer Customer = new();
+        public List<ShoppingCartItem> Products = new();
 
         public ShoppingCart(Customer _customer)
         {
@@ -25,7 +27,7 @@ namespace CKK.Logic.Models
         {
             if (quantity < 1)
             {
-                return null;
+                throw new InventoryItemStockTooLowException();
             }
             for(int index = 0; index < Products.Count; index++)
             {
@@ -35,7 +37,7 @@ namespace CKK.Logic.Models
                     return Products[index];
                 }
             }
-            ShoppingCartItem returnItem = new ShoppingCartItem(prod, quantity);
+            ShoppingCartItem returnItem = new(prod, quantity);
             Products.Add(returnItem);
             return returnItem;
         }
@@ -50,13 +52,17 @@ namespace CKK.Logic.Models
                     return Products[index];
                 }
             }
-            ShoppingCartItem returnItem = new ShoppingCartItem(prod, 1);
+            ShoppingCartItem returnItem = new(prod, 1);
             Products.Add(returnItem);
             return returnItem;
         }
         public ShoppingCartItem RemoveProduct(int id, int quantity)
         {
-            ShoppingCartItem returnItem = new ShoppingCartItem(null, 0);
+            if (quantity <= 0)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
+            ShoppingCartItem returnItem = new(null, 0);
             for (int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product.Id == id)
@@ -74,13 +80,16 @@ namespace CKK.Logic.Models
                         return Products[index];
                     }
                 }
-                Console.WriteLine("No Product Found");
             }
-            return returnItem;
+            throw new ProductDoesNotExistException();
         }
 
         public ShoppingCartItem GetProductById(int id)
         {
+            if (id < 0)
+            {
+                throw new InvalidIdException();
+            }
             for (int index = 0; index < Products.Count; index++)
             {
                 if (Products[index].Product.Id == id)

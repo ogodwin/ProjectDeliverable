@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CKK.Logic.Interfaces;
+using CKK.Logic.Exceptions;
 
 namespace CKK.Logic.Models
 {
-    public class Store : CKK.Logic.Interfaces.Entity, CKK.Logic.Interfaces.IStore
+    public class Store : Entity, IStore
     {
         //Instantiating "Store" attributes
-        private List<StoreItem> Items = new List<StoreItem>();
+        private List<StoreItem> Items = new();
 
         public Store()
         {
@@ -43,7 +45,7 @@ namespace CKK.Logic.Models
         {
             if (quantity < 1)
             {
-                return null;
+                throw new InventoryItemStockTooLowException();
             }
             for (int index = 0; index < Items.Count; index++)
             {
@@ -53,7 +55,7 @@ namespace CKK.Logic.Models
                     return Items[index];
                 }
             }
-            StoreItem returnItem = new StoreItem(prod, quantity);
+            StoreItem returnItem = new(prod, quantity);
             Items.Add(returnItem);
             return returnItem;
         }
@@ -67,16 +69,20 @@ namespace CKK.Logic.Models
                     return Items[index];
                 }
             }
-            StoreItem returnItem = new StoreItem(prod, 1);
+            StoreItem returnItem = new(prod, 1);
             Items.Add(returnItem);
             return returnItem;
         }
 
         public StoreItem RemoveStoreItem(int id, int quant)
         {
+            if (quant < 1)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
             for (int index = 0; index < Items.Count; index++)
             {
-                if (Items[index].GetProduct().GetId() == id)
+                if (Items[index].GetProduct().Id == id)
                 {
                     Items[index].SetQuantity(Items[index].GetQuantity() - quant);
                     if (Items[index].GetQuantity() < 0)
@@ -86,16 +92,20 @@ namespace CKK.Logic.Models
                     return Items[index];
                 }
             }
-            return null;
+            throw new ProductDoesNotExistException();
         }
 
         public StoreItem FindStoreItemById(int id)
         {
+            if (id < 0)
+            {
+                throw new InvalidIdException();
+            }
 
             for (int index = 0; index < Items.Count; index++)
             {
 
-                if (Items[index].GetProduct().GetId() == id)
+                if (Items[index].GetProduct().Id == id)
                 {
                     return Items[index];
                 }
