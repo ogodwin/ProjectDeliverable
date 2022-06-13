@@ -86,8 +86,9 @@ namespace CKK.Logic.Models
                 throw new ProductDoesNotExistException();
             } catch (ProductDoesNotExistException)
             {
-                return new ShoppingCartItem(null, 0);
+                
             }
+            return new ShoppingCartItem(null, 0);
         }
 
         public ShoppingCartItem GetProductById(int id)
