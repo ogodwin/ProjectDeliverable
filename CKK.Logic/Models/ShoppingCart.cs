@@ -18,12 +18,12 @@ namespace CKK.Logic.Models
             Customer = _customer;
         }
 
-        public int GetCustomerId()
+        public override GetCustomerId()
         {
             return Customer.Id;
         }
 
-        public ShoppingCartItem AddProduct(Product prod, int quantity)
+        public override AddProduct(Product prod, int quantity)
         {
             if (quantity < 1)
             {
@@ -42,7 +42,7 @@ namespace CKK.Logic.Models
             return returnItem;
         }
 
-        public ShoppingCartItem AddProduct(Product prod)
+        public override AddProduct(Product prod)
         {
             for (int index = 0; index < Products.Count; index++)
             {
@@ -56,7 +56,7 @@ namespace CKK.Logic.Models
             Products.Add(returnItem);
             return returnItem;
         }
-        public ShoppingCartItem RemoveProduct(int id, int quantity)
+        public override RemoveProduct(int id, int quantity)
         {
             if (quantity < 0)
             {
@@ -83,7 +83,7 @@ namespace CKK.Logic.Models
             }
         }
 
-        public ShoppingCartItem GetProductById(int id)
+        public override GetProductById(int id)
         {
             if (id < 0)
             {
@@ -100,7 +100,7 @@ namespace CKK.Logic.Models
             }
         }
 
-        public decimal GetTotal()
+        public override GetTotal()
         {
             decimal total = 0; 
             for (int index = 0; index < Products.Count; index++)
@@ -110,7 +110,7 @@ namespace CKK.Logic.Models
             return total;
         }
 
-        public List<ShoppingCartItem> GetProducts()
+        public override GetProducts()
         {
             return Products;
         }
