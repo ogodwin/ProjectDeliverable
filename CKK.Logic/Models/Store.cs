@@ -20,7 +20,7 @@ namespace CKK.Logic.Models
 
         //Defining "Store" methods
 
-        public override AddStoreItem(Product prod, int quantity)
+        public StoreItem AddStoreItem(Product prod, int quantity)
         {
             if (quantity < 1)
             {
@@ -38,7 +38,7 @@ namespace CKK.Logic.Models
             Items.Add(returnItem);
             return returnItem;
         }
-        public override AddStoreItem(Product prod)
+        public StoreItem AddStoreItem(Product prod)
         {
             for (int index = 0; index < Items.Count; index++)
             {
@@ -53,7 +53,7 @@ namespace CKK.Logic.Models
             return returnItem;
         }
 
-        public override RemoveStoreItem(int id, int quant)
+        public StoreItem RemoveStoreItem(int id, int quant)
         {
             if (quant < 0)
             {
@@ -74,7 +74,7 @@ namespace CKK.Logic.Models
             throw new ProductDoesNotExistException();
         }
 
-        public override FindStoreItemById(int id)
+        public StoreItem FindStoreItemById(int id)
         {
             if (id < 0)
             {
