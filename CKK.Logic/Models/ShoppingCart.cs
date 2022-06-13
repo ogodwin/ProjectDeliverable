@@ -71,7 +71,6 @@ namespace CKK.Logic.Models
                         if (Products[index].Quantity <= 0)
                         {
                             returnItem = Products[index];
-                            returnItem.Quantity = 0;
                             Products.RemoveAt(index);
                             return returnItem;
                         }
@@ -97,7 +96,7 @@ namespace CKK.Logic.Models
                     return Products[index];
                 }
             }
-            return null;
+            return new ShoppingCartItem(null, 0);
         }
 
         public decimal GetTotal()
