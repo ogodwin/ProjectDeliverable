@@ -76,7 +76,7 @@ namespace CKK.Logic.Models
 
         public StoreItem RemoveStoreItem(int id, int quant)
         {
-            if (quant < 1)
+            if (quant < 0)
             {
                 throw new ArgumentOutOfRangeException();
             }
