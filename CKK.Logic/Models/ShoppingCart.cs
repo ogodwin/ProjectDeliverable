@@ -63,8 +63,6 @@ namespace CKK.Logic.Models
                 throw new ArgumentOutOfRangeException();
             }
             ShoppingCartItem returnItem = new(null, 0);
-            try
-            {
                 for (int index = 0; index < Products.Count; index++)
                 {
                     if (Products[index].Product.Id == id)
@@ -84,11 +82,6 @@ namespace CKK.Logic.Models
                     }
                 }
                 throw new ProductDoesNotExistException();
-            } catch (ProductDoesNotExistException)
-            {
-                
-            }
-            return new ShoppingCartItem(null, 0);
         }
 
         public ShoppingCartItem GetProductById(int id)
