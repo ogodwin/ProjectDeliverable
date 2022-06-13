@@ -3,41 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CKK.Logic.Interfaces;
 
 namespace CKK.Logic.Models
 {
-    public class Customer : CKK.Logic.Interfaces.Entity
+    public class Customer : Entity
     {
-        public string Address;
+        private string _Address;
 
-        public int GetId()
+        public string Address
         {
-            return Id;
-        }
+            get
+            {
+                return _Address;
+            }
 
-        public void SetId(int customerid)
-        {
-            Id = customerid;
-        }
-
-        public string GetName()
-        {
-            return Name;
-        }
-
-        public void SetName(string customername)
-        {
-            Name = customername;
-        }
-
-        public string GetAddress()
-        {
-            return Address;
-        }
-
-        public void SetAddress(string customeraddress)
-        {
-            Address = customeraddress;
+            set
+            {
+                _Address = value;
+            }
         }
     }
 }

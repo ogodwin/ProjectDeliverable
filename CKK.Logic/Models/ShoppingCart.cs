@@ -33,7 +33,7 @@ namespace CKK.Logic.Models
             {
                 if (Products[index].Product == prod)
                 {
-                    Products[index].SetQuantity(Products[index].Quantity + quantity);
+                    Products[index].Quantity += quantity;
                     return Products[index];
                 }
             }
@@ -48,7 +48,7 @@ namespace CKK.Logic.Models
             {
                 if (Products[index].Product == prod)
                 {
-                    Products[index].SetQuantity(Products[index].Quantity + 1);
+                    Products[index].Quantity += 1;
                     return Products[index];
                 }
             }
@@ -67,11 +67,11 @@ namespace CKK.Logic.Models
                 {
                     if (Products[index].Product.Id == id)
                     {
-                        Products[index].SetQuantity(Products[index].Quantity - quantity);
+                        Products[index].Quantity -= quantity;
                         if (Products[index].Quantity <= 0)
                         {
                             returnItem = Products[index];
-                            returnItem.SetQuantity(0);
+                            returnItem.Quantity = 0;
                             Products.RemoveAt(index);
                             return returnItem;
                         }
