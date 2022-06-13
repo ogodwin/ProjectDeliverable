@@ -63,25 +63,31 @@ namespace CKK.Logic.Models
                 throw new ArgumentOutOfRangeException();
             }
             ShoppingCartItem returnItem = new(null, 0);
-            for (int index = 0; index < Products.Count; index++)
+            try
             {
-                if (Products[index].Product.Id == id)
+                for (int index = 0; index < Products.Count; index++)
                 {
-                    Products[index].SetQuantity(Products[index].Quantity - quantity);
-                    if(Products[index].Quantity <= 0)
+                    if (Products[index].Product.Id == id)
                     {
-                        returnItem = Products[index];
-                        returnItem.SetQuantity(0);
-                        Products.RemoveAt(index);
-                        return returnItem;
-                    }
-                    else
-                    {
-                        return Products[index];
+                        Products[index].SetQuantity(Products[index].Quantity - quantity);
+                        if (Products[index].Quantity <= 0)
+                        {
+                            returnItem = Products[index];
+                            returnItem.SetQuantity(0);
+                            Products.RemoveAt(index);
+                            return returnItem;
+                        }
+                        else
+                        {
+                            return Products[index];
+                        }
                     }
                 }
+                throw new ProductDoesNotExistException();
+            } catch (ProductDoesNotExistException)
+            {
+                return new ShoppingCartItem(null, 0);
             }
-            return null;
         }
 
         public ShoppingCartItem GetProductById(int id)
