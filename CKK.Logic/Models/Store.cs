@@ -112,7 +112,7 @@ namespace CKK.Logic.Models
 
             }
 
-            return new StoreItem(null, 0);
+            return null;
         }
 
         public List<StoreItem> GetStoreItems()

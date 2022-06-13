@@ -97,7 +97,7 @@ namespace CKK.Logic.Models
                     return Products[index];
                 }
             }
-            return new ShoppingCartItem(null, 0);
+            return null;
         }
 
         public decimal GetTotal()
