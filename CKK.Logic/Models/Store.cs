@@ -72,7 +72,9 @@ namespace CKK.Logic.Models
                 if (Items[itemInList].Quantity < 0)
                 {
                     Items[itemInList].Quantity = 0;
+                    Console.WriteLine("RemoveStoreItem made quantity 0");
                 }
+                Console.WriteLine(Items[itemInList].Quantity);
                 return Items[itemInList];
             }
         }
@@ -88,11 +90,13 @@ namespace CKK.Logic.Models
 
             if (itemInList == -1)
             {
-                return null;
+                Console.WriteLine("returning empty StoreItem");
+                return new(null, 0);
             }
 
             else
             {
+                Console.WriteLine("Returning normally FindStoreItemById");
                 return Items[itemInList];
             }
         }

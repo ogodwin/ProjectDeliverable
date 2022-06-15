@@ -72,6 +72,7 @@ namespace CKK.Logic.Models
                 Products[index].Quantity -= quantity;
                 if (Products[index].Quantity <= 0)
                 {
+                    Console.WriteLine("ShoppingCart_RemoveProduct quantity IS negative, removing");
                     returnItem = Products[index];
                     Products.RemoveAt(index);
                     return returnItem;
