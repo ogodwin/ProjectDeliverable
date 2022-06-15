@@ -60,22 +60,21 @@ namespace CKK.Logic.Models
                 throw new ArgumentOutOfRangeException();
             }
 
-            int itemInList = Items.FindIndex(f => f.Product.Id == id);
-            if (itemInList == -1)
+            int index = Items.FindIndex(f => f.Product.Id == id);
+            if (index == -1)
             {
                 throw new ProductDoesNotExistException();
             }
 
             else
             {
-                Items[itemInList].Quantity -= quant;
-                if (Items[itemInList].Quantity < 0)
+                Items[index].Quantity -= quant;
+                if (Items[index].Quantity < 0)
                 {
-                    Items[itemInList].Quantity = 0;
-                    Console.WriteLine("RemoveStoreItem made quantity 0");
+                    Items[index].Quantity = 0;
                 }
-                Console.WriteLine(Items[itemInList].Quantity);
-                return Items[itemInList];
+                Console.WriteLine(Items[index].Quantity);
+                return Items[index];
             }
         }
 
@@ -90,13 +89,11 @@ namespace CKK.Logic.Models
 
             if (itemInList == -1)
             {
-                Console.WriteLine("returning empty StoreItem");
                 return new(null, 0);
             }
 
             else
             {
-                Console.WriteLine("Returning normally FindStoreItemById");
                 return Items[itemInList];
             }
         }
