@@ -59,19 +59,22 @@ namespace CKK.Logic.Models
             {
                 throw new ArgumentOutOfRangeException();
             }
-            for (int index = 0; index < Items.Count; index++)
+
+            int itemInList = Items.FindIndex(f => f.Product.Id == id);
+            if (itemInList == -1)
             {
-                if (Items[index].Product.Id == id)
-                {
-                    Items[index].Quantity -= quant;
-                    if (Items[index].Quantity < 0)
-                    {
-                        Items[index].Quantity = 0;
-                    }
-                    return Items[index];
-                }
+                throw new ProductDoesNotExistException();
             }
-            throw new ProductDoesNotExistException();
+
+            else
+            {
+                Items[itemInList].Quantity -= quant;
+                if (Items[itemInList].Quantity < 0)
+                {
+                    Items[itemInList].Quantity = 0;
+                }
+                return Items[itemInList];
+            }
         }
 
         public StoreItem FindStoreItemById(int id)
@@ -81,17 +84,17 @@ namespace CKK.Logic.Models
                 throw new InvalidIdException();
             }
 
-            for (int index = 0; index < Items.Count; index++)
+            int itemInList = Items.FindIndex(f => f.Product.Id == id);
+
+            if (itemInList == -1)
             {
-
-                if (Items[index].Product.Id == id)
-                {
-                    return Items[index];
-                }
-
+                return null;
             }
 
-            return null;
+            else
+            {
+                return Items[itemInList];
+            }
         }
 
         public List<StoreItem> GetStoreItems()

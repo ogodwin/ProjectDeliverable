@@ -87,6 +87,7 @@ namespace CKK.Logic.Models
         {
             if (id < 0)
             {
+
                 throw new InvalidIdException();
             }
             if ((Products.FindIndex(f => f.Product.Id == id) == -1))
