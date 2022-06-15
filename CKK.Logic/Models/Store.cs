@@ -10,15 +10,13 @@ namespace CKK.Logic.Models
 {
     public class Store : Entity, IStore
     {
-        //Instantiating "Store" attributes
-        private List<StoreItem> Items = new();
+        public List<StoreItem> Items = new();
 
         public Store()
         {
 
         }
 
-        //Defining "Store" methods
 
         public StoreItem AddStoreItem(Product prod, int quantity)
         {
