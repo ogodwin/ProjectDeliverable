@@ -85,7 +85,7 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProductById(int id)
         {
-            try {
+            
                 Console.WriteLine("This is shoppingcart findstoreitembyid");
                 if (id < 0)
                 {
@@ -100,13 +100,7 @@ namespace CKK.Logic.Models
                 {
                     int index = Products.FindIndex(f => f.Product.Id == id);
                     return Products[index];
-                }
-                } catch (InvalidIdException IIE) {
-                    return null;
-                } catch (ProductDoesNotExistException PDNEE) {
-                    return new(null, 0);
-                }
-                
+                } 
         }
 
         public decimal GetTotal()
