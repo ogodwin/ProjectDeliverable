@@ -87,15 +87,11 @@ namespace CKK.Logic.Models
         {
                 if (id < 0)
                 {
-                    ThrowIIE();
-                    Console.WriteLine("Threw exception, returning null");
-                    return new(null, 0);
+                    throw new InvalidIdException();
                 }
                 if ((Products.FindIndex(f => f.Product.Id == id) == -1))
                 {
-                    ThrowPDNEE();
-                    Console.WriteLine("Thre exception, returning empty ShoppingCartItem");
-                    return null;
+                    throw new ProductDoesNotExistException();
                 }
                 else
                 {
@@ -117,16 +113,6 @@ namespace CKK.Logic.Models
         public List<ShoppingCartItem> GetProducts()
         {
             return Products;
-        }
-
-        public void ThrowIIE(){
-            try {throw new InvalidIdException();}
-            catch{throw;}
-        }
-
-        public void ThrowPDNEE(){
-            try {throw new ProductDoesNotExistException();}
-            catch{throw;}
         }
     }
 }
