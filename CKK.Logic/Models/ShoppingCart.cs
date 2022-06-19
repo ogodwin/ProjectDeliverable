@@ -89,13 +89,13 @@ namespace CKK.Logic.Models
                 {
                     //ThrowIIE();
                     //Console.WriteLine("Threw exception, returning null");
-                    return null;
+                    return new(null, 0);
                 }
                 if ((Products.FindIndex(f => f.Product.Id == id) == -1))
                 {
                     //ThrowPDNEE();
                     //Console.WriteLine("Thre exception, returning empty ShoppingCartItem");
-                    return new(null, 0);
+                    return null;
                 }
                 else
                 {
