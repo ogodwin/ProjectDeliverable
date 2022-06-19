@@ -123,7 +123,7 @@ namespace CKK.Logic.Models
         }
 
         public void ThrowPDNEE(){
-            try {throw new ProductDoesNotExsistException();}
+            try {throw new ProductDoesNotExistException();}
             catch{throw;}
         }
     }
