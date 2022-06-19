@@ -85,7 +85,6 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProductById(int id)
         {
-            try {
                 if (id < 0)
                 {
                     ThrowIIE();
@@ -102,9 +101,6 @@ namespace CKK.Logic.Models
                     return Products[index];
                 }
                 }
-            catch (InvalidIdException e) {
-                throw;
-        }
         }
 
         public decimal GetTotal()
