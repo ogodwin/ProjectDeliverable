@@ -88,12 +88,12 @@ namespace CKK.Logic.Models
             try {
                 if (id < 0)
                 {
-                    throw new InvalidIdException();
+                    ThrowIIE();
                     return null;
                 }
                 if ((Products.FindIndex(f => f.Product.Id == id) == -1))
                 {
-                    throw new ProductDoesNotExistException();
+                    ThrowPDNEE();
                     return new(null, 0);
                 }
                 else
@@ -120,6 +120,16 @@ namespace CKK.Logic.Models
         public List<ShoppingCartItem> GetProducts()
         {
             return Products;
+        }
+
+        public void ThrowIIE(){
+            try {throw new InvalidIdException();}
+            catch{throw;}
+        }
+
+        public void ThrowPDNEE(){
+            try {throw new ProductDoesNotExsistException();}
+            catch{throw;}
         }
     }
 }
