@@ -100,7 +100,6 @@ namespace CKK.Logic.Models
                     int index = Products.FindIndex(f => f.Product.Id == id);
                     return Products[index];
                 }
-                }
         }
 
         public decimal GetTotal()
@@ -128,3 +127,4 @@ namespace CKK.Logic.Models
             catch{throw;}
         }
     }
+}
