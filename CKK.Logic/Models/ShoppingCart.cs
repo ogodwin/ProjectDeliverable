@@ -85,18 +85,28 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProductById(int id)
         {
-            if (id < 0)
-            {
-                throw new InvalidIdException();
+            try {
+                if (id < 0)
+                {
+                    throw new InvalidIdException();
+                    return null;
+                }
+                if ((Products.FindIndex(f => f.Product.Id == id) == -1))
+                {
+                    throw new ProductDoesNotExistException();
+                    return new(null, 0);
+                }
+                else
+                {
+                    int index = Products.FindIndex(f => f.Product.Id == id);
+                    return Products[index];
+                }
+                }
+            catch (InvalidIdException e) {
+                throw;
             }
-            if ((Products.FindIndex(f => f.Product.Id == id) == -1))
-            {
-                throw new ProductDoesNotExistException();
-            }
-            else
-            {
-                int index = Products.FindIndex(f => f.Product.Id == id);
-                return Products[index];
+            catch (ProductDoesNotExistException){
+                throw;
             }
         }
 
