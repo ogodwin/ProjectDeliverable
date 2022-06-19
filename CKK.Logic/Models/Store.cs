@@ -10,15 +10,13 @@ namespace CKK.Logic.Models
 {
     public class Store : Entity, IStore
     {
-        //Instantiating "Store" attributes
-        private List<StoreItem> Items = new();
+        public List<StoreItem> Items = new();
 
         public Store()
         {
 
         }
 
-        //Defining "Store" methods
 
         public StoreItem AddStoreItem(Product prod, int quantity)
         {
@@ -59,19 +57,23 @@ namespace CKK.Logic.Models
             {
                 throw new ArgumentOutOfRangeException();
             }
-            for (int index = 0; index < Items.Count; index++)
+
+            int index = Items.FindIndex(f => f.Product.Id == id);
+            if (index == -1)
             {
-                if (Items[index].Product.Id == id)
-                {
-                    Items[index].Quantity -= quant;
-                    if (Items[index].Quantity < 0)
-                    {
-                        Items[index].Quantity = 0;
-                    }
-                    return Items[index];
-                }
+                throw new ProductDoesNotExistException();
             }
-            throw new ProductDoesNotExistException();
+
+            else
+            {
+                Items[index].Quantity -= quant;
+                if (Items[index].Quantity < 0)
+                {
+                    Items[index].Quantity = 0;
+                }
+                Console.WriteLine(Items[index].Quantity);
+                return Items[index];
+            }
         }
 
         public StoreItem FindStoreItemById(int id)
@@ -81,17 +83,17 @@ namespace CKK.Logic.Models
                 throw new InvalidIdException();
             }
 
-            for (int index = 0; index < Items.Count; index++)
+            int itemInList = Items.FindIndex(f => f.Product.Id == id);
+
+            if (itemInList == -1)
             {
-
-                if (Items[index].Product.Id == id)
-                {
-                    return Items[index];
-                }
-
+                return new(null, 0);
             }
 
-            return null;
+            else
+            {
+                return Items[itemInList];
+            }
         }
 
         public List<StoreItem> GetStoreItems()

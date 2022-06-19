@@ -85,21 +85,34 @@ namespace CKK.Logic.Models
 
         public ShoppingCartItem GetProductById(int id)
         {
+<<<<<<< HEAD
             try {
                 if (id < 0)
                 {
                     throw new InvalidIdException();
                     return null;
+=======
+            
+                Console.WriteLine("This is shoppingcart findstoreitembyid");
+                if (id < 0)
+                {
+
+                    throw new InvalidIdException();
+>>>>>>> 0334d28d4dfbf8b49670157e5b585013e1a77500
                 }
                 if ((Products.FindIndex(f => f.Product.Id == id) == -1))
                 {
                     throw new ProductDoesNotExistException();
+<<<<<<< HEAD
                     return new(null, 0);
+=======
+>>>>>>> 0334d28d4dfbf8b49670157e5b585013e1a77500
                 }
                 else
                 {
                     int index = Products.FindIndex(f => f.Product.Id == id);
                     return Products[index];
+<<<<<<< HEAD
                 }
                 }
             catch (InvalidIdException e) {
@@ -108,6 +121,9 @@ namespace CKK.Logic.Models
             catch (ProductDoesNotExistException){
                 throw;
             }
+=======
+                } 
+>>>>>>> 0334d28d4dfbf8b49670157e5b585013e1a77500
         }
 
         public decimal GetTotal()

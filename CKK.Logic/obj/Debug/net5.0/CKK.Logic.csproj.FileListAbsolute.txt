@@ -10,3 +10,7 @@ C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\obj\Debug\net5.0\CKK.Logic.
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\obj\Debug\net5.0\CKK.Logic.dll
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\obj\Debug\net5.0\ref\CKK.Logic.dll
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\obj\Debug\net5.0\CKK.Logic.pdb
+C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\bin\Debug\net5.0\CKK.Logic.exe
+C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.json
+C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.dev.json
+C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\obj\Debug\net5.0\CKK.Logic.genruntimeconfig.cache
