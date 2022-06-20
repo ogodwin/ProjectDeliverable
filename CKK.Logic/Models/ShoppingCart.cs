@@ -77,7 +77,8 @@ namespace CKK.Logic.Models
                 }
                 else
                 {
-                    return Products[index];
+                    returnItem.Quantity -= quantity;
+                    return returnItem;
                 }
             }
         }

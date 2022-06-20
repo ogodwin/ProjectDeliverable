@@ -66,10 +66,13 @@ namespace CKK.Logic.Models
 
             else
             {
-                Items[index].Quantity -= quant;
-                if (Items[index].Quantity < 0)
+                if (Items[index].Quantity - quant < 0)
                 {
                     Items[index].Quantity = 0;
+                }
+                else
+                {
+                    Items[index].Quantity -= quant;
                 }
                 Console.WriteLine(Items[index].Quantity);
                 return Items[index];
@@ -82,17 +85,14 @@ namespace CKK.Logic.Models
             {
                 throw new InvalidIdException();
             }
-
-            int itemInList = Items.FindIndex(f => f.Product.Id == id);
-
-            if (itemInList == -1)
+            if ((Items.FindIndex(f => f.Product.Id == id) == -1))
             {
-                return new(null, 0);
+                return null;
             }
-
             else
             {
-                return Items[itemInList];
+                int index = Items.FindIndex(f => f.Product.Id == id);
+                return Items[index];
             }
         }
 
