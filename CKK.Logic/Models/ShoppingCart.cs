@@ -100,11 +100,13 @@ namespace CKK.Logic.Models
                     return Products[index];
                 }
             } catch(InvalidIdException e) {
-                Console.WriteLine(e.message);
+                Console.WriteLine(e.Message);
                 Console.WriteLine("Caught Invalid Id Exception");
+                return new(null, 0);
             } catch(ProductDoesNotExistException e) {
-                Console.WriteLine(e.message);
+                Console.WriteLine(e.Message);
                 Console.WriteLine("Caught Product Does Not Exist Exception");
+                return null;
             }
         }
 
