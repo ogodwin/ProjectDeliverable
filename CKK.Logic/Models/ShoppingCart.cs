@@ -62,17 +62,16 @@ namespace CKK.Logic.Models
             {
                 throw new ArgumentOutOfRangeException();
             }
-            ShoppingCartItem returnItem = new(null, 0);
+            ShoppingCartItem returnItem = GetProductById(id);
             if ((Products.FindIndex(f => f.Product.Id == id) == -1)){
                 throw new ProductDoesNotExistException();
             }
             else
             {
                 int index = Products.FindIndex(f => f.Product.Id == id);
-                Products[index].Quantity -= quantity;
-                if (Products[index].Quantity <= 0)
+                if (returnItem.Quantity - quantity <= 0)
                 {
-                    returnItem = Products[index];
+                    returnItem.Quantity = 0;
                     Products.RemoveAt(index);
                     return returnItem;
                 }
@@ -92,7 +91,7 @@ namespace CKK.Logic.Models
                 }
                 if ((Products.FindIndex(f => f.Product.Id == id) == -1))
                 {
-                    throw new ProductDoesNotExistException();
+                    return null;
                 }
                 else
                 {
