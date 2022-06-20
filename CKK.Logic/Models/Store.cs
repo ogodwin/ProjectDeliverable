@@ -81,19 +81,8 @@ namespace CKK.Logic.Models
 
         public StoreItem FindStoreItemById(int id)
         {
-            if (id < 0)
-            {
-                throw new InvalidIdException();
-            }
-            if ((Items.FindIndex(f => f.Product.Id == id) == -1))
-            {
-                return null;
-            }
-            else
-            {
-                int index = Items.FindIndex(f => f.Product.Id == id);
-                return Items[index];
-            }
+            if (id < 0)throw new InvalidIdException();
+            return Items.FirstOrDefault(f => f.Product.Id == id);
         }
 
         public List<StoreItem> GetStoreItems()
