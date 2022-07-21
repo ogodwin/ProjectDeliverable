@@ -24,9 +24,26 @@ namespace CKK.Logic.Models
             {
                 throw new InventoryItemStockTooLowException();
             }
-            for (int index = 0; index < Items.Count; index++)
+            if (prod.Id == 0)                                       //Checks if the product ID is 0
             {
-                if (Items[index].Product == prod)
+                bool idFound = false;
+                int i = 1;
+                while(idFound == false)                             //Loops until an empty ID is found
+                {
+                    if (Items.FindIndex(item => item.Product.Id == i) == -1){
+                        prod.Id = i;
+                        idFound = true;
+                    }
+                    else
+                    {
+                        i++;
+                    }
+
+                }
+            }
+            for (int index = 0; index < Items.Count; index++)       //Searches through all items
+            {
+                if (Items[index].Product == prod)                   //Adds to exsisting item's quantity
                 {
                     Items[index].Quantity += quantity;
                     return Items[index];
@@ -88,6 +105,25 @@ namespace CKK.Logic.Models
         public List<StoreItem> GetStoreItems()
         {
             return Items;
+        }
+
+        public StoreItem DeleteStoreItem(int id)
+        {
+            StoreItem returnItem;
+            int index = Items.FindIndex(item => item.Product.Id == id);
+            if (index == -1)
+            {
+                throw new ProductDoesNotExistException();
+            }
+            else
+            {
+                returnItem = Items[index];
+                returnItem.Quantity = 0;
+                Items.RemoveAt(index);
+                return returnItem;
+            }
+            
+
         }
 
     }
