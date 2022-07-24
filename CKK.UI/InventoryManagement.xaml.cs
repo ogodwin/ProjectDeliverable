@@ -41,6 +41,41 @@ namespace CKK.UI
             RefreshList();
         }
 
+        public void SendLogin_Click(object sender, RoutedEventArgs e)
+        {
+            SendLogin.Content = "Button Click";
+        }
+
+        public void usernameTextBoxGotFocus(object sender, RoutedEventArgs e)
+        {
+            usernameTextBox.Text = "";
+        }
+
+        public void passwordTextBoxGotFocus(object sender, RoutedEventArgs e)
+        {
+            passwordTextBox.Text = "";
+        }
+
+        public void googleLogin_Click(object sender, RoutedEventArgs e)
+        {
+            googleLogin.Content = "Logged in with google";
+        }
+
+        public void instagramLogin_Click(object sender, RoutedEventArgs e)
+        {
+            instagramLogin.Content = "Logged in with instagram";
+        }
+
+        public void twitterLogin_Click(object sender, RoutedEventArgs e)
+        {
+            twitterLogin.Content = "Logged in with twitter";
+        }
+
+        public void facebookLogin_Click(object sender, RoutedEventArgs e)
+        {
+            facebookLogin.Content = "Logged in with facebook";
+        }
+
         private void RefreshList()
         {
             Items.Clear();

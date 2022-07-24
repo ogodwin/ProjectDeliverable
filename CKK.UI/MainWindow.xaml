@@ -9,10 +9,15 @@
     <Grid>
         <Label x:Name="CKKTitle" Content="Corey's Knick Knacks" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="24"/>
         <Rectangle HorizontalAlignment="Left" Height="213" Margin="40,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="284"/>
-        <TextBox HorizontalAlignment="Left" Margin="54,92,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Height="24"/>
-        <TextBox HorizontalAlignment="Left" Margin="54,121,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Height="24"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="93,180,0,0" VerticalAlignment="Top" Width="178" Height="65"/>
+        <TextBox x:Name="usernameTextBox" HorizontalAlignment="Left" Margin="54,92,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Height="24" GotFocus="usernameTextBoxGotFocus"/>
+        <TextBox x:Name="passwordTextBox" HorizontalAlignment="Left" Margin="54,121,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" Width="242" Height="24" GotFocus="passwordTextBoxGotFocus"/>
+        <Button x:Name="SendLogin" Content="Login" HorizontalAlignment="Left" Margin="93,180,0,0" VerticalAlignment="Top" Width="178" Height="65" Click="SendLogin_Click"/>
         <Label Content="Don't have an account?" HorizontalAlignment="Left" Margin="114,250,0,0" VerticalAlignment="Top" Width="136" Cursor="Hand"/>
+        <Button x:Name="googleLogin" Content="Google" HorizontalAlignment="Left" Margin="498,78,0,0" VerticalAlignment="Top" Height="38" Width="194" Click="googleLogin_Click"/>
+        <Button x:Name="instagramLogin" Content="Instagram" HorizontalAlignment="Left" Margin="498,133,0,0" VerticalAlignment="Top" Height="38" Width="195" Click="instagramLogin_Click"/>
+        <Button x:Name="twitterLogin" Content="Twitter" HorizontalAlignment="Left" Margin="497,189,0,0" VerticalAlignment="Top" Height="38" Width="195" Click="twitterLogin_Click"/>
+        <Button x:Name="facebookLogin" Content="Button" HorizontalAlignment="Left" Margin="497,244,0,0" VerticalAlignment="Top" Height="38" Width="195" Click="facebookLogin_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="213" Margin="430,78,0,0" Stroke="Black" VerticalAlignment="Top" Width="332"/>
 
     </Grid>
     <Window.Resources>
