@@ -58,3 +58,35 @@ C:\Users\Front Desk 2\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-wi
 C:\Users\Front Desk 2\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.pdb
 C:\Users\Front Desk 2\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.genruntimeconfig.cache
 C:\Users\Front Desk 2\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-windows\ref\CKK.UI.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.deps.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.runtimeconfig.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.runtimeconfig.dev.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.exe
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.UI.exe
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.UI.deps.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.UI.runtimeconfig.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.UI.runtimeconfig.dev.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.UI.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\ref\CKK.UI.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.UI.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.csproj.AssemblyReference.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\Window1.g.cs
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI_MarkupCompile.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI_MarkupCompile.lref
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\App.baml
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\Window1.baml
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.g.resources
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.AssemblyInfoInputs.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.AssemblyInfo.cs
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.csproj.CoreCompileInputs.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.csproj.CopyComplete
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\ref\CKK.UI.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverableRemake\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.genruntimeconfig.cache

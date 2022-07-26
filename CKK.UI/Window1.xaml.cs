@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CKK.Logic.Models;
+using System.Collections.ObjectModel;
 
 namespace CKK.UI
 {
@@ -22,8 +24,25 @@ namespace CKK.UI
         public Window1()
         {
             InitializeComponent();
+            Store store = new Store();
+            ObservableCollection<StoreItem> Items = new ObservableCollection<StoreItem>();
+
+            itemsListBox.ItemsSource = Items;
         }
 
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
 
+        }
+
+        private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void viewAllButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

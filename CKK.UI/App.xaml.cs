@@ -5,6 +5,8 @@ using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
+using CKK.Logic.Models;
+using System.Collections.ObjectModel;
 
 namespace CKK.UI
 {
@@ -14,4 +16,5 @@ namespace CKK.UI
     public partial class App : Application
     {
     }
+
 }

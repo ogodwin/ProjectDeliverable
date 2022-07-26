@@ -34,16 +34,16 @@ namespace CKK.UI
         }
         public InventoryManagementForm()
         {
-            Store = new Store();
+            
             InitializeComponent();
-            _Items = new ObservableCollection<StoreItem>();
-            //LISTBOXNAMEHERE.ItemsSource = _Items;
-            RefreshList();
         }
 
         public void SendLogin_Click(object sender, RoutedEventArgs e)
         {
             SendLogin.Content = "Button Click";
+            Window1 window1 = new Window1();
+            window1.Show();
+            this.Close();
         }
 
         public void usernameTextBoxGotFocus(object sender, RoutedEventArgs e)
@@ -76,10 +76,6 @@ namespace CKK.UI
             facebookLogin.Content = "Logged in with facebook";
         }
 
-        private void RefreshList()
-        {
-            Items.Clear();
-            foreach (StoreItem item in new ObservableCollection<StoreItem>(Store.GetStoreItems())) Items.Add(item);
-        }
+        
     }
 }
