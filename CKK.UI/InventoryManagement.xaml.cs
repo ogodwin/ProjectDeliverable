@@ -24,20 +24,6 @@ namespace CKK.UI
     /// </summary>
     public partial class InventoryManagementForm : Window
     {
-        private IStore Store;
-        private ObservableCollection<StoreItem> Items;
-
-        public ObservableCollection<StoreItem> _Items
-        {
-            get { return Items; }
-            private set { Items = value; }
-        }
-        public InventoryManagementForm()
-        {
-            
-            InitializeComponent();
-        }
-
         public void SendLogin_Click(object sender, RoutedEventArgs e)
         {
             SendLogin.Content = "Button Click";

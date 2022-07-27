@@ -7,14 +7,22 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
+        <Rectangle HorizontalAlignment="Left" Height="100" Margin="509,114,0,0" Stroke="Black" VerticalAlignment="Top" Width="237"/>
+
         <TextBox x:Name="idTextBox" HorizontalAlignment="Left" Margin="10,51,0,0" Text="Search by ID" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Height="40"/>
         <Button x:Name="searchButton" Content="Search" HorizontalAlignment="Left" Margin="298,10,0,0" VerticalAlignment="Top" Height="81" Width="128"/>
-        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="10,6,0,0" Text="Search by Name&#xD;&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Height="40"/>
+        <TextBox x:Name="nameTextBox" HorizontalAlignment="Left" Margin="10,6,0,0" Text="Search by Name&#xA;" TextWrapping="Wrap" VerticalAlignment="Top" Width="262" Height="40"/>
         <Button x:Name="viewAllButton" Content="View All" HorizontalAlignment="Left" Margin="445,10,0,0" VerticalAlignment="Top" Height="81" Width="292" Click="viewAllButton_Click"/>
         <ListBox x:Name="itemsListBox" Margin="10,108,501,58" ItemsSource="{Binding Mode=OneWay, Source={StaticResource globStore}}" SelectionChanged="ListBox_SelectionChanged"/>
-        <Rectangle HorizontalAlignment="Left" Height="268" Margin="339,108,0,0" Stroke="Black" VerticalAlignment="Top" Width="416"/>
-        <TextBox HorizontalAlignment="Left" Margin="352,122,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox HorizontalAlignment="Left" Margin="352,145,0,0" Text="TextBox" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Rectangle x:Name="itemEditFrame" HorizontalAlignment="Left" Height="268" Margin="339,108,0,0" Stroke="Black" VerticalAlignment="Top" Width="416"/>
+        <TextBox x:Name="selectedNameTextBox" HorizontalAlignment="Left" Margin="352,122,0,0" Text="Name" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" TextChanged="selectedNameTextBox_TextChanged" Height="28"/>
+        <TextBox x:Name="selectedIdTextBox" HorizontalAlignment="Left" Margin="352,155,0,0" Text="ID" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="26" RenderTransformOrigin="0.495,0.554"/>
+        <TextBox x:Name="quantityTextBox" HorizontalAlignment="Left" Margin="515,145,0,0" Text="Quantity" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="addQuantityButton" Content="Add" HorizontalAlignment="Left" Margin="640,130,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="removeQuantityButton" Content="Remove" HorizontalAlignment="Left" Margin="640,155,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="updateSelectedItemButton" Content="Update Selected Item" HorizontalAlignment="Left" Margin="362,297,0,0" VerticalAlignment="Top" Height="63" Width="160" Click="updateSelectedItemButton_Click"/>
+        <Button x:Name="newItemButton" Content="New Store Item" HorizontalAlignment="Left" Margin="575,297,0,0" VerticalAlignment="Top" Height="63" Width="160" Click="newItemButton_Click"/>
+        <TextBox x:Name="selectedPriceTextBox" HorizontalAlignment="Left" Margin="352,186,0,0" Text="Price" TextWrapping="Wrap" VerticalAlignment="Top" Width="142" Height="26" RenderTransformOrigin="0.495,0.554"/>
 
     </Grid>
 </Window>

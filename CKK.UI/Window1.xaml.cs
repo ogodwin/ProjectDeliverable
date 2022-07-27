@@ -21,12 +21,11 @@ namespace CKK.UI
     /// </summary>
     public partial class Window1 : Window
     {
+        Store store = new Store();
+        ObservableCollection<StoreItem> Items = new ObservableCollection<StoreItem>();
         public Window1()
         {
             InitializeComponent();
-            Store store = new Store();
-            ObservableCollection<StoreItem> Items = new ObservableCollection<StoreItem>();
-
             itemsListBox.ItemsSource = Items;
         }
 
@@ -37,12 +36,39 @@ namespace CKK.UI
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            int index = itemsListBox.SelectedIndex;
+            selectedNameTextBox.Text = Items[index].Product.Name;
+            selectedIdTextBox.Text = Items[index].Product.Id.ToString();
+            selectedPriceTextBox.Text = Items[index].Product.Price.ToString();
+            
         }
 
         private void viewAllButton_Click(object sender, RoutedEventArgs e)
         {
+            
+        }
 
+        private void selectedNameTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+        }
+
+        private void updateSelectedItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            int index = itemsListBox.SelectedIndex;
+            Items[index].Product.Name = selectedNameTextBox.Text;
+            Items[index].Product.Id = int.Parse(selectedNameTextBox.Text);
+            Items[index].Product.Price = decimal.Parse(selectedPriceTextBox.Text);
+            Items[index].Quantity = int.Parse(quantityTextBox.Text);
+        }
+
+        private void newItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            StoreItem addToStore = new(new(), int.Parse(quantityTextBox.Text));
+            addToStore.Product.Name = selectedNameTextBox.Text;
+            addToStore.Product.Id = int.Parse(selectedIdTextBox.Text);
+            addToStore.Product.Price = decimal.Parse(selectedPriceTextBox.Text);
+            Items.Add(addToStore);
         }
     }
 }
