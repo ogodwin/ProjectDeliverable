@@ -23,6 +23,8 @@ namespace CKK.UI
     {
         Store store = new Store();
         ObservableCollection<StoreItem> Items = new ObservableCollection<StoreItem>();
+        int selectedIndex;
+
         public Window1()
         {
             InitializeComponent();
@@ -36,10 +38,11 @@ namespace CKK.UI
 
         private void ListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            int index = itemsListBox.SelectedIndex;
-            selectedNameTextBox.Text = Items[index].Product.Name;
-            selectedIdTextBox.Text = Items[index].Product.Id.ToString();
-            selectedPriceTextBox.Text = Items[index].Product.Price.ToString();
+            selectedIndex = itemsListBox.SelectedIndex;
+            selectedNameTextBox.Text = Items[selectedIndex].Product.Name;
+            selectedIdTextBox.Text = Items[selectedIndex].Product.Id.ToString();
+            selectedPriceTextBox.Text = Items[selectedIndex].Product.Price.ToString();
+            quantityTextBox.Text = Items[selectedIndex].Quantity.ToString();
             
         }
 
@@ -55,11 +58,10 @@ namespace CKK.UI
 
         private void updateSelectedItemButton_Click(object sender, RoutedEventArgs e)
         {
-            int index = itemsListBox.SelectedIndex;
-            Items[index].Product.Name = selectedNameTextBox.Text;
-            Items[index].Product.Id = int.Parse(selectedNameTextBox.Text);
-            Items[index].Product.Price = decimal.Parse(selectedPriceTextBox.Text);
-            Items[index].Quantity = int.Parse(quantityTextBox.Text);
+            Items[selectedIndex].Product.Name = selectedNameTextBox.Text;
+            Items[selectedIndex].Product.Id = int.Parse(selectedNameTextBox.Text);
+            Items[selectedIndex].Product.Price = decimal.Parse(selectedPriceTextBox.Text);
+            Items[selectedIndex].Quantity = int.Parse(quantityTextBox.Text);
         }
 
         private void newItemButton_Click(object sender, RoutedEventArgs e)
@@ -69,6 +71,26 @@ namespace CKK.UI
             addToStore.Product.Id = int.Parse(selectedIdTextBox.Text);
             addToStore.Product.Price = decimal.Parse(selectedPriceTextBox.Text);
             Items.Add(addToStore);
+        }
+
+        private void selectedNameTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            selectedNameTextBox.Text = "Name";
+        }
+
+        private void selectedIdTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            selectedIdTextBox.Text = "Id";
+        }
+
+        private void selectedPriceTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            selectedPriceTextBox.Text = "Price";
+        }
+
+        private void quantityTextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            quantityTextBox.Text = "Quantity";
         }
     }
 }

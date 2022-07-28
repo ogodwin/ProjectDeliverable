@@ -24,6 +24,10 @@ namespace CKK.UI
     /// </summary>
     public partial class InventoryManagementForm : Window
     {
+        public InventoryManagementForm()
+        {
+            InitializeComponent();
+        }
         public void SendLogin_Click(object sender, RoutedEventArgs e)
         {
             SendLogin.Content = "Button Click";
