@@ -8,3 +8,5 @@ C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.csp
 C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.csproj.CoreCompileInputs.cache
 C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.exe
 C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\obj\Debug\CKK.UI.exe
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\obj\Debug\CKK.UI.pdb

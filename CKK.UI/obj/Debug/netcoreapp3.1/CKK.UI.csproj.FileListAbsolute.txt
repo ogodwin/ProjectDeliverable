@@ -1,0 +1,16 @@
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\bin\Debug\netcoreapp3.1\CKK.UI.exe
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\bin\Debug\netcoreapp3.1\CKK.UI.deps.json
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\bin\Debug\netcoreapp3.1\CKK.UI.runtimeconfig.json
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\bin\Debug\netcoreapp3.1\CKK.UI.runtimeconfig.dev.json
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\bin\Debug\netcoreapp3.1\CKK.UI.dll
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\bin\Debug\netcoreapp3.1\CKK.UI.pdb
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.csproj.AssemblyReference.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.Form1.resources
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.csproj.GenerateResource.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.AssemblyInfoInputs.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.AssemblyInfo.cs
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.csproj.CoreCompileInputs.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.dll
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.pdb
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\netcoreapp3.1\CKK.UI.genruntimeconfig.cache

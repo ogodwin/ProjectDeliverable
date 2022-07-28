@@ -14,22 +14,6 @@ C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\bin\Debug\net5.0\CKK.Logic.
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.json
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.dev.json
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.Logic\obj\Debug\net5.0\CKK.Logic.genruntimeconfig.cache
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.exe
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.deps.json
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.json
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.dev.json
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.dll
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\ref\CKK.Logic.dll
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.pdb
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.csproj.AssemblyReference.cache
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.AssemblyInfoInputs.cache
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.AssemblyInfo.cs
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.csproj.CoreCompileInputs.cache
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.dll
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\ref\CKK.Logic.dll
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.pdb
-C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.genruntimeconfig.cache
 C:\Users\Front Desk 2\source\repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.exe
 C:\Users\Front Desk 2\source\repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.deps.json
 C:\Users\Front Desk 2\source\repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.json
@@ -78,3 +62,18 @@ C:\Users\4400113414\Source\Repos\ProjectDeliverable1\CKK.Logic\obj\Debug\net5.0\
 C:\Users\4400113414\Source\Repos\ProjectDeliverable1\CKK.Logic\obj\Debug\net5.0\ref\CKK.Logic.dll
 C:\Users\4400113414\Source\Repos\ProjectDeliverable1\CKK.Logic\obj\Debug\net5.0\CKK.Logic.pdb
 C:\Users\4400113414\Source\Repos\ProjectDeliverable1\CKK.Logic\obj\Debug\net5.0\CKK.Logic.genruntimeconfig.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.exe
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.deps.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.runtimeconfig.dev.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\ref\CKK.Logic.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\bin\Debug\net5.0\CKK.Logic.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.AssemblyInfoInputs.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.AssemblyInfo.cs
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.csproj.CoreCompileInputs.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\ref\CKK.Logic.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.genruntimeconfig.cache

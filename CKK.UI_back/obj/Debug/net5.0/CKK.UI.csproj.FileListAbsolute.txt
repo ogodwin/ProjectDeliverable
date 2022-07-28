@@ -1,0 +1,9 @@
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.csproj.AssemblyReference.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.Form1.resources
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.Form2.resources
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.Properties.Resources.resources
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.csproj.GenerateResource.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.AssemblyInfoInputs.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.AssemblyInfo.cs
+C:\Users\4400113414\source\repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0\CKK.UI.csproj.CoreCompileInputs.cache
