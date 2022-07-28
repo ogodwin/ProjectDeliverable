@@ -1,0 +1,10 @@
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\bin\Debug\CKK.UI.exe.config
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\bin\Debug\CKK.UI.exe
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\bin\Debug\CKK.UI.pdb
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.csproj.AssemblyReference.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.Form1.resources
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.Properties.Resources.resources
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.csproj.GenerateResource.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.csproj.CoreCompileInputs.cache
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.exe
+C:\Users\4400113414\source\repos\ProjectDeliverable1\CKK.UI\obj\Debug\CKK.UI.pdb
