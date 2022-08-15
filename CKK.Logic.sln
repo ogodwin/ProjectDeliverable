@@ -7,10 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CKK.Logic", "CKK.Logic\CKK.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CKK.tests", "CKK.tests\CKK.tests.csproj", "{8D345CD9-3162-4221-807B-E1712753073F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKK.UI", "CKK.UI\CKK.UI.csproj", "{A0DEF5D1-BB9C-440F-ADE5-DE1A179D7D0E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CKK.UI", "CKK.UI\CKK.UI.csproj", "{A0DEF5D1-BB9C-440F-ADE5-DE1A179D7D0E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{2A2708B1-CE4A-4AB8-9782-32705314E42F} = {2A2708B1-CE4A-4AB8-9782-32705314E42F}
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CKK.Persistance", "CKK.Persistance\CKK.Persistance.csproj", "{6E0100B4-6992-4F9E-9D60-B4E6783372AE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{A0DEF5D1-BB9C-440F-ADE5-DE1A179D7D0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A0DEF5D1-BB9C-440F-ADE5-DE1A179D7D0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A0DEF5D1-BB9C-440F-ADE5-DE1A179D7D0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0100B4-6992-4F9E-9D60-B4E6783372AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0100B4-6992-4F9E-9D60-B4E6783372AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0100B4-6992-4F9E-9D60-B4E6783372AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0100B4-6992-4F9E-9D60-B4E6783372AE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
