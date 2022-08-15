@@ -5,9 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using CKK.Logic.Interfaces;
 using CKK.Logic.Exceptions;
+using System.IO;
 
 namespace CKK.Logic.Models
 {
+
+    [Serializable]
     public class Store : Entity, IStore
     {
         public List<StoreItem> Items = new();
