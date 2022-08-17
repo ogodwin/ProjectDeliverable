@@ -38,7 +38,6 @@ namespace CKK.UI
             this.newStoreItem = new System.Windows.Forms.Button();
             this.updateSelectedItem = new System.Windows.Forms.Button();
             this.itemPriceTextBox = new System.Windows.Forms.TextBox();
-            this.itemIdTextBox = new System.Windows.Forms.TextBox();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -47,10 +46,12 @@ namespace CKK.UI
             this.addQuantButton = new System.Windows.Forms.RadioButton();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.quantityNumUD = new System.Windows.Forms.NumericUpDown();
+            this.idNumUD = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).BeginInit();
             this.SuspendLayout();
             // 
             // searchByName
@@ -100,10 +101,10 @@ namespace CKK.UI
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.idNumUD);
             this.panel1.Controls.Add(this.newStoreItem);
             this.panel1.Controls.Add(this.updateSelectedItem);
             this.panel1.Controls.Add(this.itemPriceTextBox);
-            this.panel1.Controls.Add(this.itemIdTextBox);
             this.panel1.Controls.Add(this.itemNameTextBox);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(287, 102);
@@ -137,14 +138,6 @@ namespace CKK.UI
             this.itemPriceTextBox.Size = new System.Drawing.Size(184, 23);
             this.itemPriceTextBox.TabIndex = 1;
             this.itemPriceTextBox.Text = "Price";
-            // 
-            // itemIdTextBox
-            // 
-            this.itemIdTextBox.Location = new System.Drawing.Point(3, 55);
-            this.itemIdTextBox.Name = "itemIdTextBox";
-            this.itemIdTextBox.Size = new System.Drawing.Size(184, 23);
-            this.itemIdTextBox.TabIndex = 1;
-            this.itemIdTextBox.Text = "ID";
             // 
             // itemNameTextBox
             // 
@@ -224,6 +217,13 @@ namespace CKK.UI
             this.quantityNumUD.Size = new System.Drawing.Size(120, 23);
             this.quantityNumUD.TabIndex = 0;
             // 
+            // idNumUD
+            // 
+            this.idNumUD.Location = new System.Drawing.Point(3, 56);
+            this.idNumUD.Name = "idNumUD";
+            this.idNumUD.Size = new System.Drawing.Size(184, 23);
+            this.idNumUD.TabIndex = 3;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -244,6 +244,7 @@ namespace CKK.UI
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -265,9 +266,9 @@ namespace CKK.UI
         private System.Windows.Forms.Label quantityLabel;
         private System.Windows.Forms.NumericUpDown quantityNumUD;
         private System.Windows.Forms.TextBox itemPriceTextBox;
-        private System.Windows.Forms.TextBox itemIdTextBox;
         private System.Windows.Forms.TextBox itemNameTextBox;
         private System.Windows.Forms.Button newStoreItem;
         private System.Windows.Forms.Button updateSelectedItem;
+        private System.Windows.Forms.NumericUpDown idNumUD;
     }
 }

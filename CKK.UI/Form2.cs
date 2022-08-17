@@ -12,13 +12,13 @@ namespace CKK.UI
 {
     public partial class Form2 : Form
     {
-        private FileStore store;
+        private FileStore store = new();
         public Form2()
         {
             InitializeComponent();
-            store = new FileStore();
+            store.CreatePath();
             store.Load();
-            listBox1.DataSource = store.GetStoreItems();
+            listBox1.DataSource = store.Items;
         }
 
         private void searchButton_Click(object sender, EventArgs e)
@@ -28,18 +28,21 @@ namespace CKK.UI
 
         private void newStoreItem_Click(object sender, EventArgs e)
         {
-            StoreItem item = new(new(), 0);
-            item.Product.Id = int.Parse(itemIdTextBox.Text);
-            item.Product.Name = itemNameTextBox.Text;
-            item.Product.Price = decimal.Parse(itemPriceTextBox.Text);
+            Product item = new();
+            item.Id = (int)idNumUD.Value;
+            item.Name = itemNameTextBox.Text;
+            item.Price = decimal.Parse(itemPriceTextBox.Text);
             if(removeQuantButton.Checked == true)
             {
                 MessageBox.Show("Cannot create an item with a negative quantity", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                item.Quantity = (int)quantityNumUD.Value;
+                int quantity = (int)quantityNumUD.Value;
+                store.AddStoreItem(item, quantity);
             }
+            store.Save();
+
         }
     }
 }

@@ -10,13 +10,14 @@ using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 
 namespace CKK.Persistance.Models
 {
     [Serializable]
     public class FileStore : IStore, ISavable, ILoadable
     {
-        private ObservableCollection<StoreItem> Items = new ObservableCollection<StoreItem>();
+        public BindingList<StoreItem> Items = new BindingList<StoreItem>();
         readonly string FilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar + "Persistance" + Path.DirectorySeparatorChar + "StoreItems.dat";
         private int _idCounter;
 
@@ -53,18 +54,19 @@ namespace CKK.Persistance.Models
 
         public void Save()
         {
-            FileStream fileStream = File.Open(FilePath, FileMode.Open);
-            fileStream.SetLength(0);
-            BinaryFormatter formatter = new BinaryFormatter();
-            try
+            using(FileStream fileStream = File.Open(FilePath, FileMode.Open))
             {
-                formatter.Serialize(fileStream, Items);
+                fileStream.SetLength(0);
+                BinaryFormatter formatter = new BinaryFormatter();
+                try
+                {
+                    formatter.Serialize(fileStream, Items);
+                }
+                catch (SerializationException e)
+                {
+                    Console.WriteLine("Error serializing: " + e);
+                }
             }
-            catch (SerializationException e)
-            {
-                Console.WriteLine("Error serializing: " + e);
-            }
-            
         }
 
         public void Load()
@@ -72,8 +74,10 @@ namespace CKK.Persistance.Models
             BinaryFormatter formatter = new BinaryFormatter();
             try
             {
-                FileStream fileStream = File.Open(FilePath, FileMode.Open);
-                Items = (ObservableCollection<StoreItem>)formatter.Deserialize(fileStream);
+                using(FileStream fileStream = File.Open(FilePath, FileMode.Open))
+                {
+                    Items = (BindingList<StoreItem>)formatter.Deserialize(fileStream);
+                }
             }
             catch (SerializationException e)
             {
@@ -91,6 +95,7 @@ namespace CKK.Persistance.Models
             else
             {
                 File.Create(FilePath);
+                return;
             }
         }
     }
