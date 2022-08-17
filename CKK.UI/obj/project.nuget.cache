@@ -1,10 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hrx3Q57qAJtIV87mDQfN4L4hyeZA32cgx4gRPYWs3QHlBScscbFcdRglz9Qz6wk4AblWLUVuj1FJ3WZzOa+QpA==",
+  "dgSpecHash": "/MUPVXRN7cyDO8CoHvfIQgDFBiUxUFGHr3WMCNWb27cUI3jOtPOht1VU2TcJeRHBhbrgeBIRajY0L+lz6VpGwg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\4400113414\\source\\repos\\ProjectDeliverable\\CKK.UI\\CKK.UI.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\4400113414\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.25\\microsoft.netcore.app.host.win-x64.3.1.25.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\4400113414\\source\\repos\\CKK.Logic\\CKK.UI\\CKK.UI.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

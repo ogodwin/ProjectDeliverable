@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CKK.Logic.Interfaces;
+using CKK.Persistance.Models;
 
 namespace CKK.UI
 {
     public partial class Form1 : Form
     {
+        private IStore Store;
+
         public Form1()
         {
             InitializeComponent();

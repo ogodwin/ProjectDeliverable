@@ -9,13 +9,14 @@ using CKK.Persistance.Interfaces;
 using System.IO;
 using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Collections.ObjectModel;
 
 namespace CKK.Persistance.Models
 {
     [Serializable]
-    class FileStore : IStore, ISavable, ILoadable
+    public class FileStore : IStore, ISavable, ILoadable
     {
-        private List<StoreItem> Items = new List<StoreItem>();
+        private ObservableCollection<StoreItem> Items = new ObservableCollection<StoreItem>();
         readonly string FilePath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + Path.DirectorySeparatorChar + "Persistance" + Path.DirectorySeparatorChar + "StoreItems.dat";
         private int _idCounter;
 
@@ -72,7 +73,7 @@ namespace CKK.Persistance.Models
             try
             {
                 FileStream fileStream = File.Open(FilePath, FileMode.Open);
-                Items = (List<StoreItem>)formatter.Deserialize(fileStream);
+                Items = (ObservableCollection<StoreItem>)formatter.Deserialize(fileStream);
             }
             catch (SerializationException e)
             {
@@ -82,7 +83,15 @@ namespace CKK.Persistance.Models
 
         public void CreatePath()
         {
+            if (File.Exists(FilePath) == true)
+            {
+                return;
+            }
 
+            else
+            {
+                File.Create(FilePath);
+            }
         }
     }
 }

@@ -7,14 +7,41 @@
   "targets": {
     ".NETCoreApp,Version=v5.0": {
       "CKK.UI/1.0.0": {
+        "dependencies": {
+          "CKK.Logic": "1.0.0",
+          "CKK.Persistance": "1.0.0"
+        },
         "runtime": {
           "CKK.UI.dll": {}
+        }
+      },
+      "CKK.Logic/1.0.0": {
+        "runtime": {
+          "CKK.Logic.dll": {}
+        }
+      },
+      "CKK.Persistance/1.0.0": {
+        "dependencies": {
+          "CKK.Logic": "1.0.0"
+        },
+        "runtime": {
+          "CKK.Persistance.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CKK.UI/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CKK.Logic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CKK.Persistance/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
