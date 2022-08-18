@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CKK.Logic.Interfaces;
 using CKK.Logic.Models;
+using CKK.Logic.Exceptions;
 using CKK.Persistance.Interfaces;
 using System.IO;
 using System.Runtime.Serialization;
@@ -29,7 +30,39 @@ namespace CKK.Persistance.Models
 
         public StoreItem AddStoreItem(Product prod, int quantity)
         {
-            return null;
+            if (quantity < 1)
+            {
+                throw new InventoryItemStockTooLowException();
+            }
+            if (prod.Id == 0)                                       //Checks if the product ID is 0
+            {
+                bool idFound = false;
+                int i = 1;
+                while (idFound == false)                             //Loops until an empty ID is found
+                {
+                    if (Items.SingleOrDefault(item => item.Product.Id == i) == null)
+                    {
+                        prod.Id = i;
+                        idFound = true;
+                    }
+                    else
+                    {
+                        i++;
+                    }
+
+                }
+            }
+            for (int index = 0; index < Items.Count; index++)       //Searches through all items
+            {
+                if (Items[index].Product == prod)                   //Adds to exsisting item's quantity
+                {
+                    Items[index].Quantity += quantity;
+                    return Items[index];
+                }
+            }
+            StoreItem returnItem = new(prod, quantity);
+            Items.Add(returnItem);
+            return returnItem;
         }
 
         public StoreItem RemoveStoreItem(int id, int quantity)
@@ -76,7 +109,7 @@ namespace CKK.Persistance.Models
             {
                 using(FileStream fileStream = File.Open(FilePath, FileMode.Open))
                 {
-                    Items = (BindingList<StoreItem>)formatter.Deserialize(fileStream);
+                   Items = (BindingList<StoreItem>)formatter.Deserialize(fileStream);
                 }
             }
             catch (SerializationException e)

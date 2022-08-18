@@ -44,5 +44,10 @@ namespace CKK.UI
             store.Save();
 
         }
+
+        private void viewAllButton_Click(object sender, EventArgs e)
+        {
+            listBox1.DataSource = store.Items;
+        }
     }
 }

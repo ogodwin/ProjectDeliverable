@@ -35,6 +35,7 @@ namespace CKK.UI
             this.viewAllButton = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.idNumUD = new System.Windows.Forms.NumericUpDown();
             this.newStoreItem = new System.Windows.Forms.Button();
             this.updateSelectedItem = new System.Windows.Forms.Button();
             this.itemPriceTextBox = new System.Windows.Forms.TextBox();
@@ -46,12 +47,11 @@ namespace CKK.UI
             this.addQuantButton = new System.Windows.Forms.RadioButton();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.quantityNumUD = new System.Windows.Forms.NumericUpDown();
-            this.idNumUD = new System.Windows.Forms.NumericUpDown();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).BeginInit();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).BeginInit();
             this.SuspendLayout();
             // 
             // searchByName
@@ -88,6 +88,7 @@ namespace CKK.UI
             this.viewAllButton.TabIndex = 1;
             this.viewAllButton.Text = "View All";
             this.viewAllButton.UseVisualStyleBackColor = true;
+            this.viewAllButton.Click += new System.EventHandler(this.viewAllButton_Click);
             // 
             // listBox1
             // 
@@ -111,6 +112,13 @@ namespace CKK.UI
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(501, 304);
             this.panel1.TabIndex = 3;
+            // 
+            // idNumUD
+            // 
+            this.idNumUD.Location = new System.Drawing.Point(3, 56);
+            this.idNumUD.Name = "idNumUD";
+            this.idNumUD.Size = new System.Drawing.Size(184, 23);
+            this.idNumUD.TabIndex = 3;
             // 
             // newStoreItem
             // 
@@ -217,13 +225,6 @@ namespace CKK.UI
             this.quantityNumUD.Size = new System.Drawing.Size(120, 23);
             this.quantityNumUD.TabIndex = 0;
             // 
-            // idNumUD
-            // 
-            this.idNumUD.Location = new System.Drawing.Point(3, 56);
-            this.idNumUD.Name = "idNumUD";
-            this.idNumUD.Size = new System.Drawing.Size(184, 23);
-            this.idNumUD.TabIndex = 3;
-            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -239,12 +240,12 @@ namespace CKK.UI
             this.Text = "Form2";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.quantityNumUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
