@@ -38,5 +38,7 @@ namespace CKK.UI
             this.Hide();
         }
 
+        
+
     }
 }

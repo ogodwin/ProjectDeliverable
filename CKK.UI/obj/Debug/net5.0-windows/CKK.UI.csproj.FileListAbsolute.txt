@@ -42,3 +42,15 @@ C:\Users\4400113414\source\repos\CKK.Logic\CKK.UI\obj\Debug\net5.0-windows\CKK.U
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.UI\obj\Debug\net5.0-windows\ref\CKK.UI.dll
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.pdb
 C:\Users\4400113414\source\repos\CKK.Logic\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.genruntimeconfig.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.deps.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.runtimeconfig.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.runtimeconfig.dev.json
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.exe
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Persistance.dll
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Logic.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\bin\Debug\net5.0-windows\CKK.Persistance.pdb
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.Form1.resources
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.Form2.resources
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.csproj.GenerateResource.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.UI\obj\Debug\net5.0-windows\CKK.UI.csproj.CopyComplete

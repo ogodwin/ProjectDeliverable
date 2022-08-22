@@ -77,3 +77,4 @@ C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\C
 C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\ref\CKK.Logic.dll
 C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.pdb
 C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.genruntimeconfig.cache
+C:\Users\4400113414\Source\Repos\ProjectDeliverable\CKK.Logic\obj\Debug\net5.0\CKK.Logic.csproj.AssemblyReference.cache

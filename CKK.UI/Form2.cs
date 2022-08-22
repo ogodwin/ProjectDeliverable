@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using CKK.Persistance.Models;
 using CKK.Logic.Models;
+using CKK.UI;
 
 namespace CKK.UI
 {
@@ -48,6 +49,16 @@ namespace CKK.UI
         private void viewAllButton_Click(object sender, EventArgs e)
         {
             listBox1.DataSource = store.Items;
+        }
+
+        private void Form2_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            return;
+        }
+
+        private void Form2_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Form1.ActiveForm.Close();
         }
     }
 }
