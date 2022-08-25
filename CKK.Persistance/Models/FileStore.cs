@@ -85,6 +85,31 @@ namespace CKK.Persistance.Models
             return null;
         }
 
+        public BindingList<StoreItem> GetAllProductsByName(string name, BindingList<StoreItem> store)
+        {
+            BindingList<StoreItem> returnStore = new BindingList<StoreItem>();
+            foreach(StoreItem item in store)
+            {
+                if (item.Product.Name.Contains(name))
+                {
+                    returnStore.Add(item);
+                }
+            }
+            return returnStore;
+        }
+
+        public BindingList<StoreItem> GetProductsByQuantity(BindingList<StoreItem> store)
+        {
+            store.OrderByDescending(x => x.Quantity);
+            return store;
+        }
+
+        public BindingList<StoreItem> GetProductsByPrice(BindingList<StoreItem> store)
+        {
+            store.OrderByDescending(x => x.Product.Price);
+            return store;
+        }
+
         public void Save()
         {
             using(FileStream fileStream = File.Open(FilePath, FileMode.Open))

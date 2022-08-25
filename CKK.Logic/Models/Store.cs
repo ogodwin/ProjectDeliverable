@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CKK.Logic.Interfaces;
 using CKK.Logic.Exceptions;
+using System.ComponentModel;
 using System.IO;
 
 namespace CKK.Logic.Models
@@ -127,6 +128,21 @@ namespace CKK.Logic.Models
             }
             
 
+        }
+
+        public BindingList<StoreItem> GetAllProductsByName(string name, BindingList<StoreItem> store)
+        {
+            return null;
+        }
+
+        public BindingList<StoreItem> GetProductsByQuantity(BindingList<StoreItem> store)
+        {
+            return null;
+        }
+
+        public BindingList<StoreItem> GetProductsByPrice(BindingList<StoreItem> store)
+        {
+            return null;
         }
 
     }

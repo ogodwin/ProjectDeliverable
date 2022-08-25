@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CKK.Logic.Models;
 using CKK.Logic.Interfaces;
+using System.ComponentModel;
 
 namespace CKK.Logic.Interfaces
 {
@@ -19,5 +20,11 @@ namespace CKK.Logic.Interfaces
         public abstract List<StoreItem> GetStoreItems();
 
         public abstract StoreItem DeleteStoreItem(int id);
+
+        public abstract BindingList<StoreItem> GetAllProductsByName(string name, BindingList<StoreItem> store);
+
+        public abstract BindingList<StoreItem> GetProductsByQuantity(BindingList<StoreItem> store);
+
+        public abstract BindingList<StoreItem> GetProductsByPrice(BindingList<StoreItem> store);
     }
 }

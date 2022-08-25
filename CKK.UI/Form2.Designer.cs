@@ -30,7 +30,6 @@ namespace CKK.UI
         private void InitializeComponent()
         {
             this.searchByName = new System.Windows.Forms.TextBox();
-            this.searchById = new System.Windows.Forms.TextBox();
             this.searchButton = new System.Windows.Forms.Button();
             this.viewAllButton = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
@@ -47,6 +46,9 @@ namespace CKK.UI
             this.addQuantButton = new System.Windows.Forms.RadioButton();
             this.quantityLabel = new System.Windows.Forms.Label();
             this.quantityNumUD = new System.Windows.Forms.NumericUpDown();
+            this.searchById = new System.Windows.Forms.TextBox();
+            this.sortByQuantity = new System.Windows.Forms.Button();
+            this.sortByPrice = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).BeginInit();
             this.panel2.SuspendLayout();
@@ -61,14 +63,6 @@ namespace CKK.UI
             this.searchByName.Size = new System.Drawing.Size(221, 23);
             this.searchByName.TabIndex = 0;
             this.searchByName.Text = "Search by Name";
-            // 
-            // searchById
-            // 
-            this.searchById.Location = new System.Drawing.Point(13, 42);
-            this.searchById.Name = "searchById";
-            this.searchById.Size = new System.Drawing.Size(221, 23);
-            this.searchById.TabIndex = 0;
-            this.searchById.Text = "Search by ID";
             // 
             // searchButton
             // 
@@ -225,11 +219,41 @@ namespace CKK.UI
             this.quantityNumUD.Size = new System.Drawing.Size(120, 23);
             this.quantityNumUD.TabIndex = 0;
             // 
+            // searchById
+            // 
+            this.searchById.Location = new System.Drawing.Point(13, 42);
+            this.searchById.Name = "searchById";
+            this.searchById.Size = new System.Drawing.Size(221, 23);
+            this.searchById.TabIndex = 0;
+            this.searchById.Text = "Search by ID";
+            // 
+            // sortByQuantity
+            // 
+            this.sortByQuantity.Location = new System.Drawing.Point(13, 73);
+            this.sortByQuantity.Name = "sortByQuantity";
+            this.sortByQuantity.Size = new System.Drawing.Size(104, 23);
+            this.sortByQuantity.TabIndex = 4;
+            this.sortByQuantity.Text = "Sorty Quantity";
+            this.sortByQuantity.UseVisualStyleBackColor = true;
+            this.sortByQuantity.Click += new System.EventHandler(this.sortByQuantity_Click);
+            // 
+            // sortByPrice
+            // 
+            this.sortByPrice.Location = new System.Drawing.Point(130, 73);
+            this.sortByPrice.Name = "sortByPrice";
+            this.sortByPrice.Size = new System.Drawing.Size(104, 23);
+            this.sortByPrice.TabIndex = 4;
+            this.sortByPrice.Text = "Sort Price";
+            this.sortByPrice.UseVisualStyleBackColor = true;
+            this.sortByPrice.Click += new System.EventHandler(this.sortByPrice_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.sortByPrice);
+            this.Controls.Add(this.sortByQuantity);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listBox1);
             this.Controls.Add(this.viewAllButton);
@@ -256,7 +280,6 @@ namespace CKK.UI
         #endregion
 
         private System.Windows.Forms.TextBox searchByName;
-        private System.Windows.Forms.TextBox searchById;
         private System.Windows.Forms.Button searchButton;
         private System.Windows.Forms.Button viewAllButton;
         private System.Windows.Forms.ListBox listBox1;
@@ -273,5 +296,8 @@ namespace CKK.UI
         private System.Windows.Forms.Button newStoreItem;
         private System.Windows.Forms.Button updateSelectedItem;
         private System.Windows.Forms.NumericUpDown idNumUD;
+        private System.Windows.Forms.TextBox searchById;
+        private System.Windows.Forms.Button sortByQuantity;
+        private System.Windows.Forms.Button sortByPrice;
     }
 }

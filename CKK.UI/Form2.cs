@@ -7,13 +7,14 @@ using System.Text;
 using System.Windows.Forms;
 using CKK.Persistance.Models;
 using CKK.Logic.Models;
-using CKK.UI;
 
 namespace CKK.UI
 {
     public partial class Form2 : Form
     {
         private FileStore store = new();
+
+        public FileStore Store {get { return store; } }
         public Form2()
         {
             InitializeComponent();
@@ -59,6 +60,16 @@ namespace CKK.UI
         private void Form2_FormClosing(object sender, FormClosingEventArgs e)
         {
             Form1.ActiveForm.Close();
+        }
+
+        private void sortByQuantity_Click(object sender, EventArgs e)
+        {
+            store.Items = store.GetProductsByQuantity(store.Items);
+        }
+
+        private void sortByPrice_Click(object sender, EventArgs e)
+        {
+            store.Items = store.GetProductsByPrice(store.Items);
         }
     }
 }
