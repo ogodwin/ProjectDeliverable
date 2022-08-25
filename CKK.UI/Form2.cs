@@ -25,7 +25,7 @@ namespace CKK.UI
 
         private void searchButton_Click(object sender, EventArgs e)
         {
-
+            listBox1.DataSource = store.GetAllProductsByName(searchByName.Text, store.Items);
         }
 
         private void newStoreItem_Click(object sender, EventArgs e)

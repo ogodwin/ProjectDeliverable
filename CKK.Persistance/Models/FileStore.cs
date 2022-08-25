@@ -100,13 +100,41 @@ namespace CKK.Persistance.Models
 
         public BindingList<StoreItem> GetProductsByQuantity(BindingList<StoreItem> store)
         {
-            store.OrderByDescending(x => x.Quantity);
+            for (int i = 0; i < store.Count; i++)
+            {
+                for (int j = 0; j < store.Count - i; j++)
+                {
+                    if (j < store.Count - 1)
+                    {
+                        if (store[j].Quantity > store[j + 1].Quantity)
+                        {
+                            StoreItem temp = store[j];
+                            store[j] = store[j + 1];
+                            store[j + 1] = temp;
+                        }
+                    }
+                }
+            }
             return store;
         }
 
         public BindingList<StoreItem> GetProductsByPrice(BindingList<StoreItem> store)
         {
-            store.OrderByDescending(x => x.Product.Price);
+            for (int i = 0; i < store.Count; i++)
+            {
+                for (int j = 0; j < store.Count - i; j++)
+                {
+                    if (j < store.Count - 1)
+                    {
+                        if (store[j].Product.Price > store[j + 1].Product.Price)
+                        {
+                            StoreItem temp = store[j];
+                            store[j] = store[j + 1];
+                            store[j + 1] = temp;
+                        }
+                    }
+                }
+            }
             return store;
         }
 
