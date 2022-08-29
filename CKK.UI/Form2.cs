@@ -71,5 +71,24 @@ namespace CKK.UI
         {
             store.Items = store.GetProductsByPrice(store.Items);
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listBox1.SelectedItem != null)
+            {
+                StoreItem reference = (StoreItem)listBox1.SelectedItem;
+                itemNameTextBox.Text = reference.Product.Name;
+                idNumUD.Value = reference.Product.Id;
+                itemPriceTextBox.Text = reference.Product.Price.ToString();
+                quantityNumUD.Value = reference.Quantity;
+            }
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            StoreItem reference = (StoreItem)listBox1.SelectedItem;
+            store.RemoveStoreItem(listBox1.SelectedIndex, reference.Quantity);
+            store.Save();
+        }
     }
 }

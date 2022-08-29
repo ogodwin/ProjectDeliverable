@@ -34,9 +34,9 @@ namespace CKK.UI
             this.viewAllButton = new System.Windows.Forms.Button();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.idLabel = new System.Windows.Forms.Label();
             this.idNumUD = new System.Windows.Forms.NumericUpDown();
             this.newStoreItem = new System.Windows.Forms.Button();
-            this.updateSelectedItem = new System.Windows.Forms.Button();
             this.itemPriceTextBox = new System.Windows.Forms.TextBox();
             this.itemNameTextBox = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,6 +49,7 @@ namespace CKK.UI
             this.searchById = new System.Windows.Forms.TextBox();
             this.sortByQuantity = new System.Windows.Forms.Button();
             this.sortByPrice = new System.Windows.Forms.Button();
+            this.buttonDelete = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.idNumUD)).BeginInit();
             this.panel2.SuspendLayout();
@@ -92,13 +93,15 @@ namespace CKK.UI
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(221, 304);
             this.listBox1.TabIndex = 2;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.idLabel);
             this.panel1.Controls.Add(this.idNumUD);
+            this.panel1.Controls.Add(this.buttonDelete);
             this.panel1.Controls.Add(this.newStoreItem);
-            this.panel1.Controls.Add(this.updateSelectedItem);
             this.panel1.Controls.Add(this.itemPriceTextBox);
             this.panel1.Controls.Add(this.itemNameTextBox);
             this.panel1.Controls.Add(this.panel2);
@@ -107,11 +110,20 @@ namespace CKK.UI
             this.panel1.Size = new System.Drawing.Size(501, 304);
             this.panel1.TabIndex = 3;
             // 
+            // idLabel
+            // 
+            this.idLabel.AutoSize = true;
+            this.idLabel.Location = new System.Drawing.Point(3, 58);
+            this.idLabel.Name = "idLabel";
+            this.idLabel.Size = new System.Drawing.Size(18, 15);
+            this.idLabel.TabIndex = 4;
+            this.idLabel.Text = "ID";
+            // 
             // idNumUD
             // 
-            this.idNumUD.Location = new System.Drawing.Point(3, 56);
+            this.idNumUD.Location = new System.Drawing.Point(26, 56);
             this.idNumUD.Name = "idNumUD";
-            this.idNumUD.Size = new System.Drawing.Size(184, 23);
+            this.idNumUD.Size = new System.Drawing.Size(161, 23);
             this.idNumUD.TabIndex = 3;
             // 
             // newStoreItem
@@ -123,15 +135,6 @@ namespace CKK.UI
             this.newStoreItem.Text = "New Store Item";
             this.newStoreItem.UseVisualStyleBackColor = true;
             this.newStoreItem.Click += new System.EventHandler(this.newStoreItem_Click);
-            // 
-            // updateSelectedItem
-            // 
-            this.updateSelectedItem.Location = new System.Drawing.Point(26, 184);
-            this.updateSelectedItem.Name = "updateSelectedItem";
-            this.updateSelectedItem.Size = new System.Drawing.Size(193, 96);
-            this.updateSelectedItem.TabIndex = 2;
-            this.updateSelectedItem.Text = "Update Selected Item";
-            this.updateSelectedItem.UseVisualStyleBackColor = true;
             // 
             // itemPriceTextBox
             // 
@@ -247,6 +250,16 @@ namespace CKK.UI
             this.sortByPrice.UseVisualStyleBackColor = true;
             this.sortByPrice.Click += new System.EventHandler(this.sortByPrice_Click);
             // 
+            // buttonDelete
+            // 
+            this.buttonDelete.Location = new System.Drawing.Point(26, 184);
+            this.buttonDelete.Name = "buttonDelete";
+            this.buttonDelete.Size = new System.Drawing.Size(193, 96);
+            this.buttonDelete.TabIndex = 2;
+            this.buttonDelete.Text = "Delete Selected Item";
+            this.buttonDelete.UseVisualStyleBackColor = true;
+            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -294,10 +307,11 @@ namespace CKK.UI
         private System.Windows.Forms.TextBox itemPriceTextBox;
         private System.Windows.Forms.TextBox itemNameTextBox;
         private System.Windows.Forms.Button newStoreItem;
-        private System.Windows.Forms.Button updateSelectedItem;
         private System.Windows.Forms.NumericUpDown idNumUD;
         private System.Windows.Forms.TextBox searchById;
         private System.Windows.Forms.Button sortByQuantity;
         private System.Windows.Forms.Button sortByPrice;
+        private System.Windows.Forms.Label idLabel;
+        private System.Windows.Forms.Button buttonDelete;
     }
 }
